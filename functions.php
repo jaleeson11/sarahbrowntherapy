@@ -139,7 +139,6 @@ add_action( 'widgets_init', 'sarahbrowntherapy_widgets_init' );
  */
 function sarahbrowntherapy_scripts() {
 	wp_enqueue_style( 'sarahbrowntherapy-style', get_stylesheet_uri(), array(), SARAH_BROWN_THERAPY_VERSION );
-	wp_style_add_data( 'sarahbrowntherapy-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'sarahbrowntherapy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), SARAH_BROWN_THERAPY_VERSION, true );
 
