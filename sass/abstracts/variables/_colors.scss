@@ -3,6 +3,7 @@ $color__brand-sky-blue: #93D8F7;
 $color__brand-baby-blue: #AAC9E6;
 $color__brand-turquoise-blue: #73D8F4;
 $color__brand-light-blue: #F0F6FC;
+$color__brand-gold: #E6BE8A;
 
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
@@ -14,9 +15,9 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #4169e1; //royalblue
-$color__link-visited: #800080; //purple
-$color__link-hover: #191970; //midnightblue
+$color__link: $color__brand-royal-blue;
+$color__link-visited: $color__brand-royal-blue;
+$color__link-hover: $color__brand-gold;
 $color__text-main: #000;
 
 $color__border-button: #ccc #ccc #bbb;

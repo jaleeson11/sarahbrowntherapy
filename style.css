@@ -4516,7 +4516,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #000;
   font-family: "Cormorant", serif;
   font-weight: 400;
   font-size: 1rem;
@@ -4527,6 +4527,7 @@ h1, h2, h3, h4, h5 {
   margin: 3rem 0 1.38rem;
   font-family: "Italiana", serif;
   font-weight: 500;
+  color: #7DA3C6;
   line-height: 1.3;
   clear: both;
 }
@@ -4668,13 +4669,13 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #7DA3C6;
 }
 a:visited {
-  color: #800080;
+  color: #7DA3C6;
 }
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #E6BE8A;
 }
 a:focus {
   outline: thin dotted;
@@ -4764,6 +4765,22 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site-header {
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header__inner .site-branding {
+  max-width: 240px;
+  line-height: 0;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -4771,10 +4788,8 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
 }
 .main-navigation ul {
-  display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -4808,19 +4823,78 @@ textarea {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  font-size: 1.25rem;
 }
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
   display: block;
+  position: relative;
+  z-index: 1;
+  padding: 4px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 40px;
+  border-radius: 2px;
+  background-color: #7DA3C6;
+  margin: 10px;
+  transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 37.5em) {
+.main-navigation.toggled .menu-toggle {
+  background-color: #7DA3C6;
+}
+.main-navigation.toggled .menu-toggle span {
+  background-color: #fff;
+}
+.main-navigation.toggled .menu-toggle span:first-child {
+  transform: translateY(13px) rotate(45deg);
+}
+.main-navigation.toggled .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.main-navigation.toggled .menu-toggle span:last-child {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+@media screen and (max-width: 991px) {
+  .nav-menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #7DA3C6;
+    opacity: 0;
+    text-align: center;
+    padding-top: 40px;
+    transition: 0.3s ease;
+  }
+  .nav-menu li {
+    line-height: 2.5;
+  }
+  .nav-menu li a {
+    font-size: 1.75rem;
+    color: #fff;
+  }
+  .main-navigation.toggled .nav-menu {
+    left: 0;
+    opacity: 0.8;
+  }
+}
+@media screen and (min-width: 991px) {
   .menu-toggle {
     display: none;
   }
   .main-navigation ul {
     display: flex;
+    gap: 25px;
   }
 }
 .site-main .comment-navigation,

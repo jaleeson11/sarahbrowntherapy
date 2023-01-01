@@ -1,0 +1,16 @@
+.site-header {
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+
+.site-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .site-branding {
+        max-width: 240px;
+        line-height: 0;
+    }
+}
