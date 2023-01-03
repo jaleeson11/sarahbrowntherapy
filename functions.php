@@ -175,3 +175,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Add ellipses to end of post excerpt.
+ */
+function sarahbrowntherapy_excerpt_more() {
+	return '...';
+}
+add_filter( 'excerpt_more', 'sarahbrowntherapy_excerpt_more' );
