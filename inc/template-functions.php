@@ -35,3 +35,40 @@ function sarahbrowntherapy_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'sarahbrowntherapy_pingback_header' );
+
+/**
+ * Returns html for page hero.
+ * 
+ * @param int $page_id Page ID.
+ * @return bool.
+ */
+function sarahbrowntherapy_hero( $page_id ) {
+	if ( ! get_field( 'banner_image' ) ) {
+		return false;
+	} 
+	?>
+
+	<div class="entry-hero" style="background-image: url('<?php the_field( 'banner_image', $page_id ); ?>');">
+		<div class="entry-hero__content">
+			<h1 class="entry-hero__heading">
+				<?php 
+				if ( get_field( 'banner_heading', $page_id ) ) {
+					the_field( 'banner_heading', $page_id );
+				} else {
+					echo wp_kses_post( get_the_title( $page_id ) );
+				}
+				?>
+			</h1><!-- .entry-hero__heading -->
+			<h4 class="entry-hero__sub-heading">
+				<?php
+				if ( get_field( 'banner_sub-heading', $page_id ) ) {
+					the_field( 'banner_sub-heading', $page_id );
+				}
+				?>
+			</h4><!-- .entry-hero__sub-heading -->
+		</div><!-- .entry-hero__content -->
+	</div><!-- .entry-hero -->
+	<?php
+
+	return true;
+}
