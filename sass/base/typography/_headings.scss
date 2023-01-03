@@ -12,16 +12,16 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	margin-top: 0;
-	@include to_rem($font-size__h1 * $multiplier__small)
+	@include to_rem($font-size__h1 * $multiplier__medium)
 }
 
-h2 {@include to_rem($font-size__h2 * $multiplier__small)}
+h2 {@include to_rem($font-size__h2 * $multiplier__medium)}
 
-h3 {@include to_rem($font-size__h3 * $multiplier__small)}
+h3 {@include to_rem($font-size__h3 * $multiplier__medium)}
 
-h4 {@include to_rem($font-size__h4 * $multiplier__small)}
+h4 {@include to_rem($font-size__h4 * $multiplier__medium)}
 
-h5 {@include to_rem($font-size__h5 * $multiplier__small)}
+h5 {@include to_rem($font-size__h5 * $multiplier__medium)}
 
 @media screen and (min-width: $screen__small) {
 	h1 {@include to_rem($font-size__h1 * $multiplier__medium)}
