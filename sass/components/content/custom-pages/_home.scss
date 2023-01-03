@@ -1,0 +1,26 @@
+#about-me {
+    display: flex;
+    flex-direction: column;
+
+    .about-me__image {
+        border: 8px solid $color__brand-baby-blue;
+    }
+
+    h2 {
+        margin-top: 1.2rem;
+    }
+}
+
+@media screen and (min-width: $screen__large) {
+	#about-me {
+		flex-direction: row;
+
+		.about-me__content {
+			margin-left: 50px;
+		}
+
+		.about-me__image {
+			max-width: 390px;
+		}
+	}
+}

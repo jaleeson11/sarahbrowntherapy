@@ -1,0 +1,9 @@
+.site-section {
+    padding: 60px 0;
+}
+
+@media screen and (min-width: $screen__medium) {
+    .site-section {
+        padding: 100px 0;
+    }
+}
