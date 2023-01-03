@@ -9,3 +9,8 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Converts pixel font size to rem
+@mixin to_rem($value) {
+    font-size: round(($value / 16) * 100) / 100 + rem;
+}
