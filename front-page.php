@@ -56,8 +56,8 @@ get_header();
             <section id="about-me" class="site-section">
                 <img class="about-me__image" src="<?php echo get_theme_mod( 'home_about_image' ); ?>" alt="<?php echo get_theme_mod( 'home_about_image_alt' ); ?>">
                 <div class="about-me__content">
-                    <h2><?php echo get_theme_mod( 'home_about_heading' ); ?></h2>
-                    <p><?php echo get_theme_mod( 'home_about_text' ); ?></p>
+                    <h2 class="about-me__heading"><?php echo get_theme_mod( 'home_about_heading' ); ?></h2>
+                    <p class="about-me__text"><?php echo get_theme_mod( 'home_about_text' ); ?></p>
                     <a href="<?php echo get_the_permalink( get_theme_mod( 'home_about_button_link' ) );  ?>" class="site-button"><?php echo get_theme_mod( 'home_about_button_text' ); ?></a>
                 </div>
             </section><!-- #about-me -->
