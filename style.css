@@ -4534,23 +4534,23 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 2.53rem;
+  font-size: 3.37rem;
 }
 
 h2 {
-  font-size: 1.89rem;
+  font-size: 2.53rem;
 }
 
 h3 {
-  font-size: 1.42rem;
+  font-size: 1.9rem;
 }
 
 h4 {
-  font-size: 1.07rem;
+  font-size: 1.42rem;
 }
 
 h5 {
-  font-size: 0.8rem;
+  font-size: 1.07rem;
 }
 
 @media screen and (min-width: 575px) {
@@ -4734,6 +4734,7 @@ input[type=submit],
   font-weight: 500;
   text-align: center;
   padding: 0.8rem;
+  min-width: 150px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -4898,6 +4899,7 @@ textarea {
   border: none;
   border-radius: 5px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  min-width: auto;
   cursor: pointer;
 }
 .menu-toggle span {
@@ -5021,7 +5023,8 @@ textarea {
   flex-direction: column;
   height: 372px;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
 }
 .page .entry-hero .entry-hero__content {
@@ -5051,6 +5054,56 @@ textarea {
   margin-top: 1.2rem;
 }
 
+#services {
+  display: flex;
+  flex-direction: column;
+}
+#services .service {
+  flex: 1;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: box-shadow 0.3s ease;
+}
+#services .service a {
+  display: block;
+}
+#services .service:hover {
+  box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.15);
+}
+#services .service .service__image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: auto;
+}
+#services .service .service__body {
+  padding: 30px 15px;
+  text-align: center;
+}
+#services .service .service__body .service__title {
+  margin-top: 0;
+}
+#services .service .service__body .service__title .title__wave {
+  display: block;
+  background-size: 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35px;
+  width: 35px;
+  margin: 0 auto;
+}
+#services .service .service__body .service__sub-heading {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #AAC9E6;
+}
+#services .services__footer {
+  text-align: center;
+  padding-top: 20px;
+}
+
 @media screen and (min-width: 991px) {
   #about-me {
     flex-direction: row;
@@ -5060,6 +5113,17 @@ textarea {
   }
   #about-me .about-me__image {
     max-width: 390px;
+  }
+  #services {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #services .service:not(:nth-child(3)) {
+    margin-right: 90px;
+  }
+  #services .services__footer {
+    flex: 0 0 100%;
   }
 }
 /* Comments
