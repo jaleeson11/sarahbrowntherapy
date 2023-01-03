@@ -74,6 +74,16 @@
 	}
 }
 
+.testimonial__wrapper {
+	background-color: $color__brand-light-blue;
+
+	.testimonial__text {
+		font-weight: 500;
+		font-size: 32px;
+		color: $color__brand-royal-blue;
+	}
+}
+
 @media screen and (min-width: $screen__large) {
 	#about-me {
 		flex-direction: row;

@@ -115,6 +115,36 @@ get_header();
 
 			</section><!-- #services -->
 
+			<section id="testimonial" class="site-section">
+				<?php
+				$testimonial = new WP_Query(
+					array(
+						'post_type' => 'testimonial',
+						'orderby' => 'rand'
+					)
+				);
+
+				if ( $testimonial->have_posts() ) {
+					while ( $testimonial->have_posts() ) {
+						$testimonial->the_post();
+						?>
+
+						<div class="testimonial__wrapper">
+							<blockquote class="testimonial__text">
+								<?php the_content(); ?>
+							</blockquote>
+						</div>
+
+						<?php
+					}
+				} else {
+					?>
+					<h2><?php echo esc_html( 'Looks like there\'s no testimonials to display...' ); ?></h2>
+					<?php
+				}
+				?>
+			</section>
+
         </div><!-- .container -->
 
 	</main><!-- #main -->

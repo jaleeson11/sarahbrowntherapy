@@ -5107,6 +5107,15 @@ textarea {
   padding-top: 20px;
 }
 
+.testimonial__wrapper {
+  background-color: #F0F6FC;
+}
+.testimonial__wrapper .testimonial__text {
+  font-weight: 500;
+  font-size: 32px;
+  color: #7DA3C6;
+}
+
 @media screen and (min-width: 991px) {
   #about-me {
     flex-direction: row;
