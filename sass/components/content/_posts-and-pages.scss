@@ -38,7 +38,8 @@
 		flex-direction: column;
 		height: 372px;
 		background-size: cover;
-		background-position: center center;
+		background-position: center;
+		background-repeat: no-repeat;
 		text-align: center;
 
 		.entry-hero__content {
