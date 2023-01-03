@@ -4534,25 +4534,59 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 4.209rem;
+  font-size: 2.53rem;
 }
 
 h2 {
-  font-size: 3.157rem;
+  font-size: 1.89rem;
 }
 
 h3 {
-  font-size: 2.369rem;
+  font-size: 1.42rem;
 }
 
 h4 {
-  font-size: 1.777rem;
+  font-size: 1.07rem;
 }
 
 h5 {
-  font-size: 1.333rem;
+  font-size: 0.8rem;
 }
 
+@media screen and (min-width: 575px) {
+  h1 {
+    font-size: 3.37rem;
+  }
+  h2 {
+    font-size: 2.53rem;
+  }
+  h3 {
+    font-size: 1.9rem;
+  }
+  h4 {
+    font-size: 1.42rem;
+  }
+  h5 {
+    font-size: 1.07rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  h1 {
+    font-size: 4.21rem;
+  }
+  h2 {
+    font-size: 3.16rem;
+  }
+  h3 {
+    font-size: 2.37rem;
+  }
+  h4 {
+    font-size: 1.78rem;
+  }
+  h5 {
+    font-size: 1.33rem;
+  }
+}
 p {
   margin-bottom: 1.5em;
 }
@@ -4670,9 +4704,8 @@ table {
 --------------------------------------------- */
 a {
   color: #7DA3C6;
-}
-a:visited {
-  color: #7DA3C6;
+  display: inline-block;
+  text-decoration: none;
 }
 a:hover, a:focus, a:active {
   color: #E6BE8A;
@@ -4689,20 +4722,28 @@ a:hover, a:active {
 button,
 input[type=button],
 input[type=reset],
-input[type=submit] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
+input[type=submit],
+.site-button {
+  border: 2px solid;
+  border-color: #73D8F4;
+  border-radius: 25px;
+  background: none;
+  color: #73D8F4;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
-input[type=submit]:hover {
-  border-color: #ccc #bbb #aaa;
+input[type=submit]:hover,
+.site-button:hover {
+  border-color: #E6BE8A;
+  color: #E6BE8A;
 }
 button:active, button:focus,
 input[type=button]:active,
@@ -4710,10 +4751,22 @@ input[type=button]:focus,
 input[type=reset]:active,
 input[type=reset]:focus,
 input[type=submit]:active,
-input[type=submit]:focus {
-  border-color: #aaa #bbb #bbb;
+input[type=submit]:focus,
+.site-button:active,
+.site-button:focus {
+  border-color: #E6BE8A;
+  color: #E6BE8A;
 }
 
+@media screen and (max-width: 575px) {
+  button,
+  input[type=button],
+  input[type=reset],
+  input[type=submit],
+  .site-button {
+    width: 100%;
+  }
+}
 input[type=text],
 input[type=email],
 input[type=url],
@@ -4781,6 +4834,15 @@ textarea {
   line-height: 0;
 }
 
+.site-section {
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 767px) {
+  .site-section {
+    padding: 100px 0;
+  }
+}
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -4819,6 +4881,7 @@ textarea {
 }
 .main-navigation li {
   position: relative;
+  padding: 0 10px;
 }
 .main-navigation a {
   display: block;
@@ -4945,6 +5008,60 @@ textarea {
   margin: 0 0 1.5em;
 }
 
+.page .entry-header {
+  text-align: center;
+}
+.page .entry-header .entry-title {
+  margin: 2rem 0;
+}
+.page .entry-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 372px;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+.page .entry-hero .entry-hero__content {
+  padding: 10px;
+}
+.page .entry-hero .entry-hero__content .entry-hero__heading,
+.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
+  color: #fff;
+}
+.page .entry-hero .entry-hero__content .entry-hero__heading {
+  margin: 0;
+}
+.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
+  font-family: "Cormorant", serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+}
+#about-me .about-me__image {
+  border: 8px solid #AAC9E6;
+}
+#about-me h2 {
+  margin-top: 1.2rem;
+}
+
+@media screen and (min-width: 991px) {
+  #about-me {
+    flex-direction: row;
+  }
+  #about-me .about-me__content {
+    margin-left: 50px;
+  }
+  #about-me .about-me__image {
+    max-width: 390px;
+  }
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {
