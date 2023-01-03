@@ -5107,13 +5107,40 @@ textarea {
   padding-top: 20px;
 }
 
-.testimonial__wrapper {
+.testimonial__body {
   background-color: #F0F6FC;
+  padding: 20px 10px;
 }
-.testimonial__wrapper .testimonial__text {
-  font-weight: 500;
-  font-size: 32px;
+.testimonial__body::before {
+  font-family: "Dashicons";
+  content: "\f122";
+  display: block;
+  text-align: center;
+  font-size: 3rem;
   color: #7DA3C6;
+}
+.testimonial__body .quote {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #7DA3C6;
+}
+.testimonial__body .quote p {
+  margin-top: 0;
+}
+.testimonial__body .quote .quote__footer {
+  margin-top: 20px;
+}
+.testimonial__body .quote .quote__footer .quote__client {
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.testimonial__footer {
+  padding-top: 60px;
+  text-align: center;
 }
 
 @media screen and (min-width: 991px) {
@@ -5137,6 +5164,15 @@ textarea {
   }
   #services .services__footer {
     flex: 0 0 100%;
+  }
+  .testimonial__body {
+    padding: 50px;
+  }
+  .testimonial__body::before {
+    font-size: 4rem;
+  }
+  .testimonial__body .quote {
+    font-size: 2rem;
   }
 }
 /* Comments

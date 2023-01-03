@@ -129,14 +129,31 @@ get_header();
 						$testimonial->the_post();
 						?>
 
-						<div class="testimonial__wrapper">
-							<blockquote class="testimonial__text">
-								<?php the_content(); ?>
+						<div class="testimonial__body">
+							<blockquote class="quote">
+								<?php echo wp_trim_words( get_the_content(), 100 ); ?>
+								<footer class="quote__footer">
+									<?php
+									if ( get_field( 'client_name' ) ) :
+										?>
+										<span class="quote__client">
+											<?php the_field( 'client_name' ); ?>
+										</span>
+										<?php
+									endif;
+									?>
+								</footer>
 							</blockquote>
 						</div>
 
 						<?php
 					}
+
+					?>
+					<footer class="testimonial__footer">
+						<a href="<?php the_permalink( get_page_by_path( 'testimonials' ) ) ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
+					</footer>
+					<?php
 				} else {
 					?>
 					<h2><?php echo esc_html( 'Looks like there\'s no testimonials to display...' ); ?></h2>
