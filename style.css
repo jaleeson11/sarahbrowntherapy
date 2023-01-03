@@ -5050,7 +5050,10 @@ textarea {
 #about-me .about-me__image {
   border: 8px solid #AAC9E6;
 }
-#about-me h2 {
+#about-me .about-me__content {
+  text-align: center;
+}
+#about-me .about-me__content .about-me__heading {
   margin-top: 1.2rem;
 }
 
@@ -5110,6 +5113,7 @@ textarea {
   }
   #about-me .about-me__content {
     margin-left: 50px;
+    text-align: left;
   }
   #about-me .about-me__image {
     max-width: 390px;

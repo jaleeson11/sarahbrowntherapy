@@ -6,9 +6,13 @@
         border: 8px solid $color__brand-baby-blue;
     }
 
-    h2 {
-        margin-top: 1.2rem;
-    }
+	.about-me__content {
+		text-align: center;
+
+		.about-me__heading {
+			margin-top: 1.2rem;
+		}
+	}
 }
 
 #services {
@@ -76,6 +80,7 @@
 
 		.about-me__content {
 			margin-left: 50px;
+			text-align: left;
 		}
 
 		.about-me__image {
