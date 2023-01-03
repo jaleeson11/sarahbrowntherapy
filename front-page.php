@@ -51,39 +51,39 @@ get_header();
 
 		?>
 
-        <div class="container">
+		<div class="container">
 
-            <section id="about-me" class="site-section">
-                <img class="about-me__image" src="<?php echo get_theme_mod( 'home_about_image' ); ?>" alt="<?php echo get_theme_mod( 'home_about_image_alt' ); ?>">
-                <div class="about-me__content">
-                    <h2 class="about-me__heading"><?php echo get_theme_mod( 'home_about_heading' ); ?></h2>
-                    <p class="about-me__text"><?php echo get_theme_mod( 'home_about_text' ); ?></p>
-                    <a href="<?php echo get_the_permalink( get_theme_mod( 'home_about_button_link' ) );  ?>" class="site-button"><?php echo get_theme_mod( 'home_about_button_text' ); ?></a>
-                </div>
-            </section><!-- #about-me -->
+			<section id="about-me" class="site-section">
+				<img class="about-me__image" src="<?php echo esc_url( get_theme_mod( 'home_about_image' ) ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'home_about_image_alt' ) ); ?>">
+				<div class="about-me__content">
+					<h2 class="about-me__heading"><?php echo esc_html( get_theme_mod( 'home_about_heading' ) ); ?></h2>
+					<p class="about-me__text"><?php echo esc_html( get_theme_mod( 'home_about_text' ) ); ?></p>
+					<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'home_about_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'home_about_button_text' ) ); ?></a>
+				</div>
+			</section><!-- #about-me -->
 
 
 			<section id="services" class="site-section">
 				<?php
 				$services = new WP_Query(
 					array(
-						'post_type' => 'service',
-						'posts_per_page' => 3
+						'post_type'      => 'service',
+						'posts_per_page' => 3,
 					)
 				);
 
 				if ( $services->have_posts() ) {
 					while ( $services->have_posts() ) {
 						$services->the_post();
-						?>	
+						?>
 
 						<div class="service">
 							<a href="<?php the_permalink(); ?>">
-								<div class="service__image" style="background-image: url( '<?php echo get_the_post_thumbnail_url(); ?>' );"></div>
+								<div class="service__image" style="background-image: url( '<?php echo esc_url( get_the_post_thumbnail_url() ); ?>' );"></div>
 								<div class="service__body">
 									<h4 class="service__title">
 										<?php the_title(); ?>
-										<span class="title__wave" style="background-image: url( '<?php echo get_template_directory_uri(); ?>/images/wave.svg' );"></span>
+										<span class="title__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
 									</h4>
 									<?php
 									if ( get_field( 'service_sub-heading' ) ) :
@@ -103,7 +103,7 @@ get_header();
 					
 					?>
 					<footer class="services__footer">
-						<a href="<?php the_permalink( get_page_by_path( 'services' ) ) ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
+						<a href="<?php the_permalink( get_page_by_path( 'services' ) ); ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
 					</footer>
 					<?php
 				} else {
@@ -120,7 +120,7 @@ get_header();
 				$testimonial = new WP_Query(
 					array(
 						'post_type' => 'testimonial',
-						'orderby' => 'rand'
+						'orderby'   => 'rand',
 					)
 				);
 
@@ -131,7 +131,7 @@ get_header();
 
 						<div class="testimonial__body">
 							<blockquote class="quote">
-								<?php echo wp_trim_words( get_the_content(), 100 ); ?>
+								<?php echo esc_html( wp_trim_words( get_the_content(), 100 ) ); ?>
 								<footer class="quote__footer">
 									<?php
 									if ( get_field( 'client_name' ) ) :
@@ -151,7 +151,7 @@ get_header();
 
 					?>
 					<footer class="testimonial__footer">
-						<a href="<?php the_permalink( get_page_by_path( 'testimonials' ) ) ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
+						<a href="<?php the_permalink( get_page_by_path( 'testimonials' ) ); ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
 					</footer>
 					<?php
 				} else {
@@ -162,7 +162,7 @@ get_header();
 				?>
 			</section>
 
-        </div><!-- .container -->
+		</div><!-- .container -->
 
 	</main><!-- #main -->
 
