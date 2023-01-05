@@ -47,11 +47,16 @@ get_header();
 		<div class="container">
 
 			<section id="about-me" class="site-section">
-				<img class="about-me__image" src="<?php echo esc_url( get_theme_mod( 'home_about_image' ) ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'home_about_image_alt' ) ); ?>">
+				<?php
+				$image_url = get_theme_mod( 'about_me_image' );
+				$image_id = attachment_url_to_postid( $image_url );
+				?>
+
+				<img class="about-me__image" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
 				<div class="about-me__content">
-					<h2 class="about-me__heading"><?php echo esc_html( get_theme_mod( 'home_about_heading' ) ); ?></h2>
-					<p class="about-me__text"><?php echo esc_html( get_theme_mod( 'home_about_text' ) ); ?></p>
-					<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'home_about_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'home_about_button_text' ) ); ?></a>
+					<h2 class="about-me__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
+					<p class="about-me__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
+					<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'about_me_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'about_me_button_text' ) ); ?></a>
 				</div>
 			</section><!-- #about-me -->
 
@@ -160,5 +165,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
