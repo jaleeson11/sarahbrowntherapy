@@ -22,13 +22,13 @@ get_header();
 
 		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-        $services = new WP_Query(
-            array(
-                'post_type' => 'service',
-				'paged'     => $paged,  
-				'posts_per_page' => 5,     
-            )
-        );
+		$services = new WP_Query(
+			array(
+				'post_type'      => 'service',
+				'paged'          => $paged,
+				'posts_per_page' => 2,     
+			)
+		);
 
 		?>
 		<section class="site-section">
@@ -47,14 +47,16 @@ get_header();
 						?>
 						<div class="pagination-links">
 							<?php
-							echo paginate_links(
-								array(
-									'current'      => $current_page,
-									'total'        => $total_pages,
-									'prev_text'    => 'prev',
-									'next_text'    => 'next',
-								)
-							) 
+							echo wp_kses_post( 
+								paginate_links(
+									array(
+										'current'      => $current_page,
+										'total'        => $total_pages,
+										'prev_text'    => 'prev',
+										'next_text'    => 'next',
+									)
+								) 
+							)
 							?>
 						</div>
 						<?php
@@ -67,7 +69,7 @@ get_header();
 
 				wp_reset_postdata();
 				?>
-				
+
 			</div><!-- .container -->
 		</section>
 
