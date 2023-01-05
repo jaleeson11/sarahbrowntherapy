@@ -22,42 +22,99 @@
 	margin: 0 0 1.5em;
 }
 
-.page {
-	.entry-header {
-		text-align: center;
-		
-		.entry-title {
-			margin: 2rem 0;
+.pagination-links {
+	text-align: center;
+
+	.page-numbers {
+		display: inline-block;
+		font-size: 1.25rem;
+		width: 35px;
+	}
+
+	.current {
+		border-bottom: 2px solid $color__brand-sky-blue;
+	}
+}
+
+article {
+	&.page {
+		.entry-header {
+			text-align: center;
+			
+			.entry-title {
+				margin: 2rem 0;
+			}
+		}
+	
+		.entry-hero {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: 372px;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			text-align: center;
+	
+			.entry-hero__content {
+				padding: 10px;
+	
+				.entry-hero__heading,
+				.entry-hero__sub-heading {
+					color: #fff;
+				}
+	
+				.entry-hero__heading {
+					margin: 0;
+				}
+			
+				.entry-hero__sub-heading {
+					font-family: $font__main;
+					text-transform: uppercase;
+					letter-spacing: 3px;
+				}
+			}
 		}
 	}
 
-	.entry-hero {
+	&.service {
 		display: flex;
-		align-items: center;
-		justify-content: center;
 		flex-direction: column;
-		height: 372px;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		text-align: center;
+	
+		&:not(:last-child) {
+			margin-bottom: 80px;
+		}
+	
+		.entry-thumbnail {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			padding-top: 75%;
+		}
+	
+		.entry-title {
+			margin-top: 1.2rem;
+		}
+	}
+}
 
-		.entry-hero__content {
-			padding: 10px;
+@media screen and (min-width: $screen__large) {
+	article.service {
+		flex-direction: row;
+		flex-wrap: wrap;
 
-			.entry-hero__heading,
-			.entry-hero__sub-heading {
-				color: #fff;
-			}
+		.entry-thumbnail {
+			min-width: 282px;
+		}
 
-			.entry-hero__heading {
-				margin: 0;
-			}
-		
-			.entry-hero__sub-heading {
-				font-family: $font__main;
-				text-transform: uppercase;
-				letter-spacing: 3px;
+		.entry-body {
+			flex: 1;
+			margin-left: 40px;
+
+			.entry-title {
+				margin-top: 0;
 			}
 		}
 	}

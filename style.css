@@ -5010,13 +5010,25 @@ textarea {
   margin: 0 0 1.5em;
 }
 
-.page .entry-header {
+.pagination-links {
   text-align: center;
 }
-.page .entry-header .entry-title {
+.pagination-links .page-numbers {
+  display: inline-block;
+  font-size: 1.25rem;
+  width: 35px;
+}
+.pagination-links .current {
+  border-bottom: 2px solid #93D8F7;
+}
+
+article.page .entry-header {
+  text-align: center;
+}
+article.page .entry-header .entry-title {
   margin: 2rem 0;
 }
-.page .entry-hero {
+article.page .entry-hero {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5027,22 +5039,55 @@ textarea {
   background-repeat: no-repeat;
   text-align: center;
 }
-.page .entry-hero .entry-hero__content {
+article.page .entry-hero .entry-hero__content {
   padding: 10px;
 }
-.page .entry-hero .entry-hero__content .entry-hero__heading,
-.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
+article.page .entry-hero .entry-hero__content .entry-hero__heading,
+article.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
   color: #fff;
 }
-.page .entry-hero .entry-hero__content .entry-hero__heading {
+article.page .entry-hero .entry-hero__content .entry-hero__heading {
   margin: 0;
 }
-.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
+article.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
   font-family: "Cormorant", serif;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+article.service {
+  display: flex;
+  flex-direction: column;
+}
+article.service:not(:last-child) {
+  margin-bottom: 80px;
+}
+article.service .entry-thumbnail {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 75%;
+}
+article.service .entry-title {
+  margin-top: 1.2rem;
+}
 
+@media screen and (min-width: 991px) {
+  article.service {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  article.service .entry-thumbnail {
+    min-width: 282px;
+  }
+  article.service .entry-body {
+    flex: 1;
+    margin-left: 40px;
+  }
+  article.service .entry-body .entry-title {
+    margin-top: 0;
+  }
+}
 #about-me {
   display: flex;
   flex-direction: column;
@@ -5077,6 +5122,7 @@ textarea {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-color: #F0F6FC;
   height: 200px;
   width: auto;
 }
