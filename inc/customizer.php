@@ -67,117 +67,228 @@ add_action( 'customize_preview_init', 'sarahbrowntherapy_customize_preview_js' )
  */
 function sarahbrowntherapy_custom_sections( $wp_customize ) {
 	$wp_customize->add_panel(
-		'home',
+		'sarahbrowntherapy_theme_options',
 		array(
-			'title' => 'Home Page',
+			'title' => 'Theme Options',
+			'description' => 'Theme modifications for custom content can be done here',
 		)
 	);
 
 	$wp_customize->add_section(
-		'home_about',
+		'sarahbrowntherapy_about_me',
 		array(
 			'title' => 'About Me Section',
-			'panel' => 'home',
+			'panel' => 'sarahbrowntherapy_theme_options',
 		)
 	);
 
 	$wp_customize->add_setting(
-		'home_about_heading',
+		'sarahbrowntherapy_about_me_heading',
 		array(
 			'default' => 'Example heading text',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'home_about_heading_control',
+			'sarahbrowntherapy_about_me_heading',
 			array(
+				'type'     => 'text',
+				'section'  => 'sarahbrowntherapy_about_me',
 				'label'    => 'Heading',
-				'section'  => 'home_about',
-				'settings' => 'home_about_heading',
 			)
 		)
 	);
 
 	$wp_customize->add_setting(
-		'home_about_text',
+		'sarahbrowntherapy_about_me_text',
 		array(
 			'default' => 'Example paragraph text',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'home_about_text_control',
+			'sarahbrowntherapy_about_me_text',
 			array(
-				'label'    => 'Text',
-				'section'  => 'home_about',
-				'settings' => 'home_about_text',
 				'type'     => 'textarea',
+				'section'  => 'sarahbrowntherapy_about_me',
+				'label'    => 'Text',
 			)
 		)
 	);
 
 	$wp_customize->add_setting(
-		'home_about_button_text',
+		'sarahbrowntherapy_about_me_button',
 		array(
 			'default' => 'Example button text',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'home_about_button_text_control',
+			'sarahbrowntherapy_about_me_button',
 			array(
+				'type'     => 'text',
+				'section'  => 'sarahbrowntherapy_about_me',
 				'label'    => 'Button Text',
-				'section'  => 'home_about',
-				'settings' => 'home_about_button_text',
 			)
 		)
 	);
 
-	$wp_customize->add_setting( 'home_about_button_link' );
+	$wp_customize->add_setting( 'sarahbrowntherapy_about_me_button_link' );
 	
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'home_about_button_link_control',
+			'sarahbrowntherapy_about_me_button_link',
 			array(
-				'label'    => 'Button Link',
-				'section'  => 'home_about',
-				'settings' => 'home_about_button_link',
 				'type'     => 'dropdown-pages',
+				'section'  => 'sarahbrowntherapy_about_me',
+				'label'    => 'Button Link',
+				'description' => 'The page that the button links to',
 			)
 		)
 	);
 
-	$wp_customize->add_setting( 'home_about_image' );
+	$wp_customize->add_setting( 'sarahbrowntherapy_about_me_image' );
 	
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
 			$wp_customize,
-			'home_about_image_control',
+			'sarahbrowntherapy_about_me_image',
 			array(
+				'section'  => 'sarahbrowntherapy_about_me',
 				'label'    => 'Image',
-				'section'  => 'home_about',
-				'settings' => 'home_about_image',
 			)
 		)
 	);
 
-	$wp_customize->add_setting( 'home_about_image_alt' );
+	$wp_customize->add_section(
+		'sarahbrowntherapy_contact_banner',
+		array(
+			'title' => 'Contact Banner',
+			'panel' => 'sarahbrowntherapy_theme_options',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'sarahbrowntherapy_location',
+		array(
+			'default' => 'Your location',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'home_about_image_alt_control',
+			'sarahbrowntherapy_location',
 			array(
-				'label'    => 'Image Alt Text',
-				'section'  => 'home_about',
-				'settings' => 'home_about_image_alt',
+				'type'     => 'text',
+				'section'  => 'sarahbrowntherapy_contact_banner',
+				'label'    => 'Location',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'sarahbrowntherapy_location_sub-heading',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'sarahbrowntherapy_location_sub-heading',
+			array(
+				'type'     => 'text',
+				'section'  => 'sarahbrowntherapy_contact_banner',
+				'label'    => 'Location Sub-heading',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'sarahbrowntherapy_email',
+		array(
+			'default' => get_option( 'admin_email' ),
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'sarahbrowntherapy_email',
+			array(
+				'type'     => 'email',
+				'section'  => 'sarahbrowntherapy_contact_banner',
+				'label'    => 'Email Address',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'sarahbrowntherapy_email_sub-heading',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'sarahbrowntherapy_email_sub-heading',
+			array(
+				'type'     => 'text',
+				'section'  => 'sarahbrowntherapy_contact_banner',
+				'label'    => 'Email Sub-heading',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'sarahbrowntherapy_phone',
+		array(
+			'default' => '01234567890',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'sarahbrowntherapy_phone',
+			array(
+				'type'     => 'number',
+				'section'  => 'sarahbrowntherapy_contact_banner',
+				'label'    => 'Contact Number',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'sarahbrowntherapy_phone_sub-heading',
+		array(
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'sarahbrowntherapy_phone_sub-heading',
+			array(
+				'type'     => 'text',
+				'section'  => 'sarahbrowntherapy_contact_banner',
+				'label'    => 'Contact Number Sub-heading',
 			)
 		)
 	);
