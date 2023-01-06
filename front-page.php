@@ -52,8 +52,8 @@ get_header();
 				$image_id  = attachment_url_to_postid( $image_url );
 				?>
 
-				<img class="about-me__image" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
-				<div class="about-me__content">
+				<img class="about-me__image observe" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
+				<div class="about-me__content observe">
 					<h2 class="about-me__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
 					<p class="about-me__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
 					<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'about_me_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'about_me_button_text' ) ); ?></a>
@@ -75,7 +75,7 @@ get_header();
 						$services->the_post();
 						?>
 
-						<div class="service">
+						<div class="service observe">
 							<a href="<?php the_permalink(); ?>">
 								<div class="service__image" style="background-image: url( '<?php echo esc_url( get_the_post_thumbnail_url() ); ?>' );"></div>
 								<div class="service__body">
@@ -100,7 +100,7 @@ get_header();
 					}
 					
 					?>
-					<footer class="services__footer">
+					<footer class="services__footer observe">
 						<a href="<?php the_permalink( get_page_by_path( 'services' ) ); ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
 					</footer>
 					<?php
@@ -119,7 +119,7 @@ get_header();
 					array(
 						'post_type'      => 'testimonial',
 						'posts_per_page' => 1,
-						'orderby'        => 'rand',
+						// 'orderby'        => 'rand',
 					)
 				);
 
@@ -128,7 +128,7 @@ get_header();
 						$testimonial->the_post();
 						?>
 
-						<div class="testimonial__body">
+						<div class="testimonial__body observe">
 							<blockquote class="quote">
 								<?php echo esc_html( wp_trim_words( get_the_content(), 100 ) ); ?>
 								<footer class="quote__footer">
@@ -149,7 +149,7 @@ get_header();
 					}
 
 					?>
-					<footer class="testimonial__footer">
+					<footer class="testimonial__footer observe">
 						<a href="<?php the_permalink( get_page_by_path( 'testimonials' ) ); ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
 					</footer>
 					<?php
