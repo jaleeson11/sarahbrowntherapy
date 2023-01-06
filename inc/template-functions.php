@@ -58,6 +58,7 @@ function sarahbrowntherapy_hero( $page_id ) {
 					echo wp_kses_post( get_the_title( $page_id ) );
 				}
 				?>
+				<span class="entry-hero__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave-white.svg' );"></span>
 			</h1><!-- .entry-hero__heading -->
 			<h4 class="entry-hero__sub-heading">
 				<?php
