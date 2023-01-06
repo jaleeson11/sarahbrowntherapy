@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php 
-	$page_hero = sarahbrowntherapy_hero( get_the_id() );
+	$page_hero = sarahbrowntherapy_hero();
 	if ( ! $page_hero ) :
 		?>
 		<header class="entry-header">

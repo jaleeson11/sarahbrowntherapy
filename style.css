@@ -4523,6 +4523,11 @@ textarea {
   line-height: 1.75;
 }
 
+@media screen and (min-width: 991px) {
+  html {
+    font-size: 18px;
+  }
+}
 h1, h2, h3, h4, h5 {
   margin: 3rem 0 1.38rem;
   font-family: "Italiana", serif;
@@ -5082,13 +5087,14 @@ textarea {
   border-bottom: 2px solid #93D8F7;
 }
 
-article.page .entry-header {
+.entry-header {
   text-align: center;
 }
-article.page .entry-header .entry-title {
+.entry-header .entry-title {
   margin: 2rem 0;
 }
-article.page .entry-hero {
+
+.entry-hero {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5099,17 +5105,17 @@ article.page .entry-hero {
   background-repeat: no-repeat;
   text-align: center;
 }
-article.page .entry-hero .entry-hero__content {
+.entry-hero .entry-hero__content {
   padding: 10px;
 }
-article.page .entry-hero .entry-hero__content .entry-hero__heading,
-article.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
+.entry-hero .entry-hero__content .entry-hero__heading,
+.entry-hero .entry-hero__content .entry-hero__sub-heading {
   color: #fff;
 }
-article.page .entry-hero .entry-hero__content .entry-hero__heading {
+.entry-hero .entry-hero__content .entry-hero__heading {
   margin: 0;
 }
-article.page .entry-hero .entry-hero__content .entry-hero__heading .entry-hero__wave {
+.entry-hero .entry-hero__content .entry-hero__heading .entry-hero__wave {
   display: block;
   background-size: 40px;
   background-position: center;
@@ -5118,7 +5124,7 @@ article.page .entry-hero .entry-hero__content .entry-hero__heading .entry-hero__
   width: 40px;
   margin: 0 auto;
 }
-article.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
+.entry-hero .entry-hero__content .entry-hero__sub-heading {
   font-family: "Cormorant", serif;
   text-transform: uppercase;
   letter-spacing: 3px;

@@ -37,36 +37,36 @@ function sarahbrowntherapy_pingback_header() {
 add_action( 'wp_head', 'sarahbrowntherapy_pingback_header' );
 
 /**
- * Returns html for page hero.
+ * Returns html for post hero.
  * 
- * @param int $page_id Page ID.
  * @return bool.
  */
-function sarahbrowntherapy_hero( $page_id ) {
-	if ( ! get_field( 'banner_image' ) ) {
+function sarahbrowntherapy_hero() {
+	$image_url = get_post_type() === 'page' ? get_field( 'banner_image' ) : get_the_post_thumbnail_url();
+	$post_id = get_the_id();
+
+	if ( ! $image_url ) {
 		return false;
 	} 
 	?>
 
-	<div class="entry-hero" style="background-image: url('<?php the_field( 'banner_image', $page_id ); ?>');">
+	<div class="entry-hero" style="background-image: url( '<?php echo esc_url( $image_url ); ?>' );">
 		<div class="entry-hero__content">
 			<h1 class="entry-hero__heading">
 				<?php 
-				if ( get_field( 'banner_heading', $page_id ) ) {
-					the_field( 'banner_heading', $page_id );
+				if ( get_field( 'banner_heading', $post_id ) ) {
+					the_field( 'banner_heading', $post_id );
 				} else {
-					echo wp_kses_post( get_the_title( $page_id ) );
+					echo wp_kses_post( get_the_title( $post_id ) );
 				}
 				?>
 				<span class="entry-hero__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave-white.svg' );"></span>
 			</h1><!-- .entry-hero__heading -->
-			<h4 class="entry-hero__sub-heading">
-				<?php
-				if ( get_field( 'banner_sub-heading', $page_id ) ) {
-					the_field( 'banner_sub-heading', $page_id );
-				}
-				?>
-			</h4><!-- .entry-hero__sub-heading -->
+			<?php if ( get_field( 'banner_sub-heading', $post_id ) ) : ?>
+				<h4 class="entry-hero__sub-heading">
+					<?php the_field( 'banner_sub-heading', $post_id ); ?>
+				</h4><!-- .entry-hero__sub-heading -->
+			<?php endif; ?>
 		</div><!-- .entry-hero__content -->
 	</div><!-- .entry-hero -->
 	<?php
