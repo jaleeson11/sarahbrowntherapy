@@ -5060,6 +5060,7 @@ textarea {
 
 .pagination-links {
   text-align: center;
+  margin-top: 60px;
 }
 .pagination-links .page-numbers {
   display: inline-block;
@@ -5118,6 +5119,34 @@ article.service .entry-thumbnail {
 }
 article.service .entry-title {
   margin-top: 1.2rem;
+}
+article.testimonial {
+  display: flex;
+  align-items: center;
+  background-color: #AAC9E6;
+  color: #fff;
+}
+article.testimonial:nth-child(even) {
+  background-color: #F0F6FC;
+  color: #7DA3C6;
+}
+article.testimonial .entry-quote {
+  padding: 35px;
+}
+article.testimonial .entry-quote p {
+  margin: 0;
+}
+article.testimonial .entry-quote::before {
+  font-family: "Dashicons";
+  font-size: 1.8rem;
+  content: "\f122";
+  display: block;
+  text-align: center;
+}
+article.testimonial .entry-quote .entry-quote__footer {
+  padding-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 @media screen and (min-width: 991px) {
@@ -5269,6 +5298,13 @@ article.service .entry-title {
     font-size: 2rem;
   }
 }
+.testimonials-grid {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-rows: 20px;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

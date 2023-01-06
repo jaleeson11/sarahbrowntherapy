@@ -24,6 +24,7 @@
 
 .pagination-links {
 	text-align: center;
+	margin-top: 60px;
 
 	.page-numbers {
 		display: inline-block;
@@ -96,6 +97,40 @@ article {
 	
 		.entry-title {
 			margin-top: 1.2rem;
+		}
+	}
+
+	&.testimonial {
+		display: flex;
+		align-items: center;
+		background-color: $color__brand-baby-blue;
+		color: #fff;
+
+		&:nth-child(even) {
+			background-color: $color__brand-light-blue;
+			color: $color__brand-royal-blue;
+		}
+
+		.entry-quote {
+			padding: 35px;
+
+			p {
+				margin: 0;
+			}
+
+			&::before {
+				font-family: 'Dashicons';
+				font-size: 1.8rem;
+				content: '\f122';
+				display: block;
+				text-align: center;
+			}
+
+			.entry-quote__footer {
+				padding-top: 20px;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
 		}
 	}
 }
