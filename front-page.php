@@ -159,7 +159,7 @@ get_header();
 					<?php
 				}
 				?>
-			</section>
+			</section><!-- #testimonial -->
 
 		</div><!-- .container -->
 

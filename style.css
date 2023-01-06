@@ -4882,6 +4882,11 @@ textarea {
   content: "\f525";
 }
 
+.site-copyright {
+  text-align: center;
+  padding-top: 40px;
+}
+
 @media screen and (min-width: 991px) {
   .site-contact-banner .site-contact-banner__inner {
     align-items: center;
@@ -4994,7 +4999,7 @@ textarea {
     line-height: 2.5;
   }
   .nav-menu li a {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     color: #fff;
   }
   .main-navigation.toggled .nav-menu {
@@ -5119,7 +5124,7 @@ article.service {
   flex-direction: column;
 }
 article.service:not(:last-child) {
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 article.service .entry-thumbnail {
   background-repeat: no-repeat;
@@ -5198,7 +5203,6 @@ article.testimonial .entry-quote .entry-quote__footer {
   flex: 1;
   box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
-  transition: box-shadow 0.3s ease;
 }
 #services .service a {
   display: block;
