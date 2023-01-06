@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying testimonials
+ * Template part for displaying testimonial list items
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="entry-testimonial">
 
 	<blockquote class="entry-quote">
 		<?php the_content(); ?>
@@ -28,4 +28,4 @@
 
 	</blockquote><!-- .entry-quote -->
 
-</article><!-- #post-<?php the_ID(); ?> -->
+</div><!-- .entry-testimonial -->

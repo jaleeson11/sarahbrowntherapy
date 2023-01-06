@@ -62,7 +62,7 @@ elements.forEach(function (element) {
     item.style.gridRowEnd = 'span ' + rowSpan;
   }
   function resizeAllGridItems() {
-    var items = $('article.testimonial');
+    var items = $('.entry-testimonial');
     items.each(function (index, item) {
       resizeGridItem(item);
     });

@@ -8,7 +8,7 @@
     }
 
     function resizeAllGridItems(){
-        const items = $( 'article.testimonial' );
+        const items = $( '.entry-testimonial' );
         items.each( ( index, item ) => {
             resizeGridItem( item )
         } );
