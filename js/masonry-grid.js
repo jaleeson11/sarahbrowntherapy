@@ -1,4 +1,4 @@
-( function($) {
+( function( $ ) {
     function resizeGridItem( item ) {
         const grid = $( '.testimonials-grid' ),
         rowHeight = parseInt( grid.css( 'grid-auto-rows' ) ),
@@ -16,4 +16,4 @@
 
     $( window ).load( () => resizeAllGridItems() );
     $( window ).on( 'resize', () => resizeAllGridItems() );
-}(jQuery) );
+} ( jQuery ) );
