@@ -4831,7 +4831,7 @@ textarea {
   align-items: center;
 }
 .site-header__inner .site-branding {
-  max-width: 240px;
+  max-width: 220px;
   line-height: 0;
 }
 
@@ -4942,7 +4942,7 @@ textarea {
   display: block;
   position: relative;
   z-index: 1;
-  padding: 4px;
+  padding: 2px;
   background-color: #fff;
   border: none;
   border-radius: 5px;
@@ -4953,10 +4953,10 @@ textarea {
 .menu-toggle span {
   display: block;
   height: 3px;
-  width: 40px;
+  width: 35px;
   border-radius: 2px;
   background-color: #7DA3C6;
-  margin: 10px;
+  margin: 8px;
   transition: all 0.3s ease;
 }
 
@@ -4967,13 +4967,13 @@ textarea {
   background-color: #fff;
 }
 .main-navigation.toggled .menu-toggle span:first-child {
-  transform: translateY(13px) rotate(45deg);
+  transform: translateY(11px) rotate(45deg);
 }
 .main-navigation.toggled .menu-toggle span:nth-child(2) {
   opacity: 0;
 }
 .main-navigation.toggled .menu-toggle span:last-child {
-  transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-11px) rotate(-45deg);
 }
 
 @media screen and (max-width: 991px) {
@@ -4998,7 +4998,7 @@ textarea {
   }
   .main-navigation.toggled .nav-menu {
     left: 0;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 @media screen and (min-width: 991px) {
@@ -5098,10 +5098,20 @@ article.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
 article.page .entry-hero .entry-hero__content .entry-hero__heading {
   margin: 0;
 }
+article.page .entry-hero .entry-hero__content .entry-hero__heading .entry-hero__wave {
+  display: block;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+}
 article.page .entry-hero .entry-hero__content .entry-hero__sub-heading {
   font-family: "Cormorant", serif;
   text-transform: uppercase;
   letter-spacing: 3px;
+  margin: 0.6rem 0 0;
 }
 article.service {
   display: flex;
