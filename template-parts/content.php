@@ -10,6 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php sarahbrowntherapy_hero(); ?>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
