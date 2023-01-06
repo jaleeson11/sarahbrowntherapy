@@ -11,5 +11,11 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+@media screen and (min-width: $screen__large) {
+	html {
+		font-size: 18px;
+	}
+}
+
 @import "headings";
 @import "copy";
