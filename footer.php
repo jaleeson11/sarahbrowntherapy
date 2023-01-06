@@ -48,19 +48,16 @@
 			</div><!-- .container -->
 		</div><!-- .site-contact-banner -->
 
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sarahbrowntherapy' ) ); ?>">
+		<div class="site-copyright">
+			<p>
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sarahbrowntherapy' ), 'WordPress' );
+				echo esc_html( '&copy; Copyright ' );
+				echo esc_html( date( 'Y ' ) );
+				echo esc_html( get_option( 'blogname' ) );
+				echo esc_html( '. All Rights Reserved' );
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sarahbrowntherapy' ), 'sarahbrowntherapy', '<a href="http://underscores.me/">Joe Leeson</a>' );
-				?>
-		</div><!-- .site-info -->
+			</p>
+		</div><!-- .site-copyright -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
