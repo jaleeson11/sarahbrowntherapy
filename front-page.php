@@ -49,7 +49,7 @@ get_header();
 			<section id="about-me" class="site-section">
 				<?php
 				$image_url = get_theme_mod( 'about_me_image' );
-				$image_id = attachment_url_to_postid( $image_url );
+				$image_id  = attachment_url_to_postid( $image_url );
 				?>
 
 				<img class="about-me__image" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
@@ -117,8 +117,9 @@ get_header();
 				<?php
 				$testimonial = new WP_Query(
 					array(
-						'post_type' => 'testimonial',
-						'orderby'   => 'rand',
+						'post_type'      => 'testimonial',
+						'posts_per_page' => 1,
+						'orderby'        => 'rand',
 					)
 				);
 

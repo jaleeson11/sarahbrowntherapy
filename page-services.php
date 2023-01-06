@@ -58,7 +58,7 @@ get_header();
 								) 
 							)
 							?>
-						</div>
+						</div><!-- .pagination-links -->
 						<?php
 					endif;
 				} else {
@@ -71,10 +71,9 @@ get_header();
 				?>
 
 			</div><!-- .container -->
-		</section>
+		</section><!-- .site-section -->
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
