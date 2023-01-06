@@ -4844,56 +4844,61 @@ textarea {
     padding: 100px 0;
   }
 }
-.site-contact-banner {
+.site-footer {
+  padding-top: 40px;
+}
+.site-footer .site-contact-banner {
   background-color: #7DA3C6;
 }
-.site-contact-banner .site-contact-banner__inner {
+.site-footer .site-contact-banner .site-contact-banner__inner {
   display: flex;
   flex-direction: column;
 }
-.site-contact-banner .site-contact-banner__inner > div {
+.site-footer .site-contact-banner .site-contact-banner__inner > div {
   text-align: center;
   padding: 40px 15px;
 }
-.site-contact-banner .site-contact-banner__inner > div .site-contact-banner__heading {
+.site-footer .site-contact-banner .site-contact-banner__inner > div .site-contact-banner__heading {
   color: #fff;
   margin: 0;
 }
-.site-contact-banner .site-contact-banner__inner > div .site-contact-banner__sub-heading {
+.site-footer .site-contact-banner .site-contact-banner__inner > div .site-contact-banner__sub-heading {
   color: #73D8F4;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 0;
 }
-.site-contact-banner .site-contact-banner__inner > div::before {
+.site-footer .site-contact-banner .site-contact-banner__inner > div::before {
   font-family: "Dashicons";
   font-size: 2.2rem;
   color: #fff;
   display: block;
 }
-.site-contact-banner .site-contact-banner__inner > div.site-contact-banner__location::before {
+.site-footer .site-contact-banner .site-contact-banner__inner > div.site-contact-banner__location::before {
   content: "\f230";
 }
-.site-contact-banner .site-contact-banner__inner > div.site-contact-banner__email::before {
+.site-footer .site-contact-banner .site-contact-banner__inner > div.site-contact-banner__email::before {
   content: "\f465";
 }
-.site-contact-banner .site-contact-banner__inner > div.site-contact-banner__phone::before {
+.site-footer .site-contact-banner .site-contact-banner__inner > div.site-contact-banner__phone::before {
   content: "\f525";
 }
-
-.site-copyright {
+.site-footer .site-copyright {
   text-align: center;
   padding-top: 40px;
 }
 
 @media screen and (min-width: 991px) {
-  .site-contact-banner .site-contact-banner__inner {
+  .site-footer {
+    padding-top: 80px;
+  }
+  .site-footer .site-contact-banner .site-contact-banner__inner {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .site-contact-banner .site-contact-banner__inner > div {
+  .site-footer .site-contact-banner .site-contact-banner__inner > div {
     flex: 1;
   }
 }
