@@ -13,8 +13,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _masonry_grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./masonry-grid */ "./js/masonry-grid.js");
 /* harmony import */ var _masonry_grid__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_masonry_grid__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _intersection_observer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./intersection-observer */ "./js/intersection-observer.js");
+/* harmony import */ var _intersection_observer__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_intersection_observer__WEBPACK_IMPORTED_MODULE_2__);
 
 
+
+
+/***/ }),
+
+/***/ "./js/intersection-observer.js":
+/*!*************************************!*\
+  !*** ./js/intersection-observer.js ***!
+  \*************************************/
+/***/ (() => {
+
+var elements = document.querySelectorAll('.observe');
+var options = {
+  root: null,
+  threshold: 0.6
+};
+var observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle('observe--fade-in');
+    observer.unobserve(entry.target);
+  });
+}, options);
+elements.forEach(function (element) {
+  observer.observe(element);
+});
 
 /***/ }),
 

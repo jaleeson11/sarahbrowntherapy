@@ -15,13 +15,13 @@
 	if ( has_post_thumbnail() ) :
 		?>
 		<a href="<?php the_permalink(); ?>">
-			<div class="entry-thumbnail" style="background-image: url( '<?php echo esc_url( get_the_post_thumbnail_url() ); ?>' );"></div>
+			<div class="entry-thumbnail observe" style="background-image: url( '<?php echo esc_url( get_the_post_thumbnail_url() ); ?>' );"></div>
 		</a>
 		<?php
 	endif;
 	?>
 
-	<div class="entry-body">
+	<div class="entry-body observe">
 		<header class="entry-header">
 			<?php
 			if ( is_singular() ) :

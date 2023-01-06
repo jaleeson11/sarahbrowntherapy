@@ -1,0 +1,10 @@
+.observe {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all ease .5s;
+
+    &.observe--fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
