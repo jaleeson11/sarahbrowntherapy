@@ -10,56 +10,40 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php sarahbrowntherapy_hero(); ?>
 
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+	<div class="container">
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				sarahbrowntherapy_posted_on();
-				sarahbrowntherapy_posted_by();
+		<?php sarahbrowntherapy_post_thumbnail(); ?>
+
+		<header class="entry-header">
+			<?php
+			if ( is_singular() ) :
+				the_title( '<h2 class="entry-title">', '</h2>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
+
+			if ( 'post' === get_post_type() ) :
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+				<div class="entry-meta">
+					<?php sarahbrowntherapy_posted_on(); ?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</header><!-- .entry-header -->
 
-	<?php sarahbrowntherapy_post_thumbnail(); ?>
+		<div class="entry-content">
+			<?php
+			the_content();
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'sarahbrowntherapy' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">',
+					'after'  => '</div>',
+				)
+			);
+			?>
+		</div><!-- .entry-content -->
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sarahbrowntherapy' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php sarahbrowntherapy_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</div><!-- .container -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->
