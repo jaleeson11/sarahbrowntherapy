@@ -26,7 +26,7 @@ get_header();
 			array(
 				'post_type'      => 'testimonial',
 				'paged'          => $paged,
-				'posts_per_page' => 7,     
+				'posts_per_page' => 10,     
 			)
 		);
 
@@ -41,8 +41,30 @@ get_header();
 							<?php
 							while ( $testimonials->have_posts() ) {
 								$testimonials->the_post();
+								?>
 
-								get_template_part( 'template-parts/content', get_post_type() . '-list-item' );
+								<div class="entry-testimonial">
+
+									<blockquote class="entry-quote">
+										<?php the_content(); ?>
+
+										<footer class="entry-quote__footer">
+											<?php
+											if ( get_field( 'client_name' ) ) :
+												?>
+												<span class="entry-quote__client">
+													<?php the_field( 'client_name' ); ?>
+												</span><!-- .entry-quote__client -->
+												<?php
+											endif;
+											?>
+										</footer><!-- .entry-quote__footer -->
+
+									</blockquote><!-- .entry-quote -->
+
+								</div><!-- .entry-testimonial -->
+
+								<?php
 							}
 							?>
 						</div><!-- .testimonials-grid -->
