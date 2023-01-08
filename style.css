@@ -4659,7 +4659,7 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 0;
 }
 
 ul {
@@ -5001,9 +5001,10 @@ textarea {
     background-color: #7DA3C6;
     opacity: 0;
     text-align: center;
-    padding-top: 40px;
+    padding: 2.5rem 0;
     transition: 0.3s ease;
     z-index: 1;
+    overflow-y: scroll;
   }
   .nav-menu li {
     line-height: 2.5;
@@ -5023,7 +5024,10 @@ textarea {
   }
   .main-navigation ul {
     display: flex;
-    gap: 25px;
+    flex-wrap: wrap;
+  }
+  .main-navigation ul > li:not(:last-child) {
+    margin-right: 1.56rem;
   }
 }
 .site-main .comment-navigation,
@@ -5054,9 +5058,12 @@ textarea {
   display: block;
 }
 
-.post,
 .page {
   margin: 0 0 1.5em;
+}
+
+.post {
+  margin: 3.5em 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -5064,26 +5071,29 @@ textarea {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
 
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
+.entry-content {
+  margin-top: 2.5rem;
 }
 
-.pagination-links {
+.pagination-links,
+.page-links {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 3.8rem;
 }
-.pagination-links .page-numbers {
+.pagination-links .page-numbers,
+.pagination-links .post-page-numbers,
+.page-links .page-numbers,
+.page-links .post-page-numbers {
   display: inline-block;
   font-size: 1.25rem;
   width: 35px;
 }
-.pagination-links .current {
+.pagination-links .current,
+.page-links .current {
   border-bottom: 2px solid #93D8F7;
 }
 
@@ -5091,7 +5101,20 @@ textarea {
   text-align: center;
 }
 .entry-header .entry-title {
-  margin: 2rem 0;
+  margin-top: 2rem;
+}
+
+.post .entry-header {
+  text-align: left;
+}
+.post .entry-content {
+  margin-top: 0;
+}
+
+.posted-on {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #93D8F7;
 }
 
 .entry-hero {
@@ -5099,7 +5122,7 @@ textarea {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 372px;
+  min-height: 372px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5107,6 +5130,7 @@ textarea {
 }
 .entry-hero .entry-hero__content {
   padding: 10px;
+  max-width: 800px;
 }
 .entry-hero .entry-hero__content .entry-hero__heading,
 .entry-hero .entry-hero__content .entry-hero__sub-heading {
@@ -5131,6 +5155,51 @@ textarea {
   margin: 0.6rem 0 0;
 }
 
+.entry-list-item {
+  display: flex;
+  flex-direction: column;
+}
+.entry-list-item:not(:last-child) {
+  margin-bottom: 7.5rem;
+}
+.entry-list-item .entry-thumbnail {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 75%;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
+}
+.entry-list-item .entry-header {
+  text-align: left;
+}
+.entry-list-item .entry-header .entry-title {
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 991px) {
+  .entry-content {
+    margin-top: 5rem;
+  }
+  .entry-list-item {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .entry-list-item .entry-thumbnail {
+    min-width: 352px;
+  }
+  .entry-list-item .entry-list-item__body {
+    flex: 1;
+    margin-left: 2.5rem;
+  }
+  .entry-list-item .entry-list-item__body .entry-title {
+    margin-top: 0;
+  }
+  .post .container {
+    max-width: 800px;
+  }
+}
 #about-me {
   display: flex;
   flex-direction: column;
@@ -5298,42 +5367,6 @@ textarea {
   letter-spacing: 3px;
 }
 
-.entry-service {
-  display: flex;
-  flex-direction: column;
-}
-.entry-service:not(:last-child) {
-  margin-bottom: 120px;
-}
-.entry-service .entry-thumbnail {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  padding-top: 75%;
-  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
-}
-.entry-service .entry-title {
-  margin-top: 1.2rem;
-  margin-bottom: 0;
-}
-
-@media screen and (min-width: 991px) {
-  .entry-service {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .entry-service .entry-thumbnail {
-    min-width: 352px;
-  }
-  .entry-service .entry-service__body {
-    flex: 1;
-    margin-left: 40px;
-  }
-  .entry-service .entry-service__body .entry-title {
-    margin-top: 0;
-  }
-}
 .observe {
   opacity: 0;
   transform: translateY(100px);

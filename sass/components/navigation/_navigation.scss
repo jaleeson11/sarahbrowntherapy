@@ -126,9 +126,10 @@
 		background-color: $color__brand-royal-blue;
 		opacity: 0;
 		text-align: center;
-		padding-top: 40px;
+		padding: 2.5rem 0;
 		transition: .3s ease;
 		z-index: 1;
+		overflow-y: scroll;
 	
 		li {
 			line-height: 2.5;
@@ -154,7 +155,11 @@
 
 	.main-navigation ul {
 		display: flex;
-		gap: 25px;
+		flex-wrap: wrap;
+		
+		> li:not(:last-child) {
+			margin-right: 1.56rem;
+		}
 	}
 }
 
