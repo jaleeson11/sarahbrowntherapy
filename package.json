@@ -30,5 +30,8 @@
     "dev": "npx mix",
     "watch": "npx mix watch",
     "production": "npx mix --production"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
