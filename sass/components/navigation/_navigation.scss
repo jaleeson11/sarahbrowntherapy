@@ -8,15 +8,10 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+			background-color: #fff;
 
 			ul {
 				left: -999em;
-				top: 0;
 			}
 
 			li {
@@ -30,6 +25,7 @@
 
 			a {
 				width: 200px;
+				margin: 0 auto;
 			}
 
 			:hover > a,
@@ -131,10 +127,10 @@
 		z-index: 1;
 		overflow-y: scroll;
 	
-		li {
+		> li {
 			line-height: 2.5;
 	
-			a {
+			> a {
 				font-size: 2.25rem;
 				color: #fff;
 			}
@@ -156,6 +152,14 @@
 	.main-navigation ul {
 		display: flex;
 		flex-wrap: wrap;
+
+		ul {
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+		}
 		
 		> li:not(:last-child) {
 			margin-right: 1.56rem;

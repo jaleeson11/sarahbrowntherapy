@@ -5512,10 +5512,42 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px;
+  color: #7DA3C6;
+  border: none;
+  background-color: #F0F6FC;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=url]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=search]::-webkit-input-placeholder, input[type=number]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=range]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder, input[type=month]::-webkit-input-placeholder, input[type=week]::-webkit-input-placeholder, input[type=time]::-webkit-input-placeholder, input[type=datetime]::-webkit-input-placeholder, input[type=datetime-local]::-webkit-input-placeholder, input[type=color]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #AAC9E6;
+}
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=range]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=month]::-moz-placeholder, input[type=week]::-moz-placeholder, input[type=time]::-moz-placeholder, input[type=datetime]::-moz-placeholder, input[type=datetime-local]::-moz-placeholder, input[type=color]::-moz-placeholder, textarea::-moz-placeholder {
+  color: #AAC9E6;
+}
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=search]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=range]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder, input[type=month]:-ms-input-placeholder, input[type=week]:-ms-input-placeholder, input[type=time]:-ms-input-placeholder, input[type=datetime]:-ms-input-placeholder, input[type=datetime-local]:-ms-input-placeholder, input[type=color]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #AAC9E6;
+}
+input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=url]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=search]::-ms-input-placeholder, input[type=number]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, input[type=range]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder, input[type=month]::-ms-input-placeholder, input[type=week]::-ms-input-placeholder, input[type=time]::-ms-input-placeholder, input[type=datetime]::-ms-input-placeholder, input[type=datetime-local]::-ms-input-placeholder, input[type=color]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #AAC9E6;
+}
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=url]::placeholder,
+input[type=password]::placeholder,
+input[type=search]::placeholder,
+input[type=number]::placeholder,
+input[type=tel]::placeholder,
+input[type=range]::placeholder,
+input[type=date]::placeholder,
+input[type=month]::placeholder,
+input[type=week]::placeholder,
+input[type=time]::placeholder,
+input[type=datetime]::placeholder,
+input[type=datetime-local]::placeholder,
+input[type=color]::placeholder,
+textarea::placeholder {
+  color: #AAC9E6;
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -5533,7 +5565,7 @@ input[type=datetime]:focus,
 input[type=datetime-local]:focus,
 input[type=color]:focus,
 textarea:focus {
-  color: #111;
+  color: #7DA3C6;
 }
 
 select {
@@ -5669,15 +5701,10 @@ textarea {
 .main-navigation ul ul {
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
+  background-color: #fff;
 }
 .main-navigation ul ul ul {
   left: -999em;
-  top: 0;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   display: block;
@@ -5685,6 +5712,7 @@ textarea {
 }
 .main-navigation ul ul a {
   width: 200px;
+  margin: 0 auto;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
@@ -5758,10 +5786,10 @@ textarea {
     z-index: 1;
     overflow-y: scroll;
   }
-  .nav-menu li {
+  .nav-menu > li {
     line-height: 2.5;
   }
-  .nav-menu li a {
+  .nav-menu > li > a {
     font-size: 2.25rem;
     color: #fff;
   }
@@ -5780,6 +5808,13 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .main-navigation ul ul {
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
   }
   .main-navigation ul > li:not(:last-child) {
     margin-right: 1.56rem;
@@ -6035,7 +6070,7 @@ textarea {
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #F0F6FC;
-  height: 200px;
+  padding-top: 75%;
   width: auto;
 }
 #services .service .service__body {
