@@ -1,7 +1,7 @@
 {
-    "name": "sarahbrowntherapy",
+    "name": "joeleeson/sarahbrowntherapy",
     "type": "wordpress-theme",
-    "description": "A custom WordPress Theme built for a professional psychotherpist.",
+    "description": "A bespoke WordPress Theme built for a professional psychotherpist.",
     "keywords": [
         "WordPress",
         "Themes"
@@ -25,7 +25,7 @@
     "scripts": {
         "lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
         "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor .",
-        "make-pot": "wp i18n make-pot . languages/_s.pot"
+        "make-pot": "wp i18n make-pot . languages/sarahbrowntherapy.pot"
     },
     "config": {
         "allow-plugins": {
