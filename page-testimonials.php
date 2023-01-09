@@ -49,15 +49,15 @@ get_header();
 										<?php the_content(); ?>
 
 										<footer class="entry-quote__footer">
-											<?php
-											if ( get_field( 'client_name' ) ) :
-												?>
-												<span class="entry-quote__client">
-													<?php the_field( 'client_name' ); ?>
-												</span><!-- .entry-quote__client -->
+											<span class="entry-quote__client">
 												<?php
-											endif;
-											?>
+												if ( get_field( 'client_name' ) ) {
+													the_field( 'client_name' );
+												} else {
+													echo esc_html( 'Anonymous' );
+												}
+												?>
+											</span>
 										</footer><!-- .entry-quote__footer -->
 
 									</blockquote><!-- .entry-quote -->
