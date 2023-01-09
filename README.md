@@ -1,7 +1,7 @@
 Sarah Brown Therapy 
 ===
 
-> A custom Wordpress theme based on the [Underscores](https://underscores.me/) starter theme. 
+> A bespoke Wordpress theme based on the [Underscores](https://underscores.me/) starter theme. 
 
 Built for a professional psychotherapist.
 
