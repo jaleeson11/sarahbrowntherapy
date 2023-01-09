@@ -211,3 +211,11 @@ function sarahbrowntherapy_disable_search( $query, $error = true ) {
 	}
 }
 add_action( 'parse_query', 'sarahbrowntherapy_disable_search' ); 
+
+/**
+ * Replace default login error message.
+ */
+function  sarahbrowntherapy_login_error() {
+	return 'Your username or password is incorrect';
+}
+add_filter( 'login_errors', 'sarahbrowntherapy_login_error' );
