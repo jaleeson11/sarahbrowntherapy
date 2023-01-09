@@ -119,7 +119,7 @@ get_header();
 					array(
 						'post_type'      => 'testimonial',
 						'posts_per_page' => 1,
-						// 'orderby'        => 'rand',
+						'orderby'        => 'rand',
 					)
 				);
 
@@ -132,15 +132,15 @@ get_header();
 							<blockquote class="quote">
 								<?php echo esc_html( wp_trim_words( get_the_content(), 100 ) ); ?>
 								<footer class="quote__footer">
-									<?php
-									if ( get_field( 'client_name' ) ) :
-										?>
-										<span class="quote__client">
-											<?php the_field( 'client_name' ); ?>
-										</span>
+									<span class="quote__client">
 										<?php
-									endif;
-									?>
+										if ( get_field( 'client_name' ) ) {
+											the_field( 'client_name' );
+										} else {
+											echo esc_html( 'Anonymous' );
+										}
+										?>
+									</span>
 								</footer>
 							</blockquote>
 						</div>
