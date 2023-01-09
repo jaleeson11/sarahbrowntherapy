@@ -4841,12 +4841,12 @@ textarea {
 }
 
 .site-section {
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 
 @media screen and (min-width: 767px) {
   .site-section {
-    padding: 100px 0;
+    padding: 6.25rem 0;
   }
 }
 .site-footer {
@@ -5176,6 +5176,10 @@ textarea {
 .entry-list-item .entry-header .entry-title {
   margin-top: 1.2rem;
   margin-bottom: 0;
+}
+
+.error-404 {
+  text-align: center;
 }
 
 @media screen and (min-width: 991px) {
