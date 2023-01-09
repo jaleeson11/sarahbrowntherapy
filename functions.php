@@ -184,3 +184,14 @@ function sarahbrowntherapy_excerpt_more() {
 	return '...';
 }
 add_filter( 'excerpt_more', 'sarahbrowntherapy_excerpt_more' );
+
+/**
+ * Redirect templates.
+ */
+function sarahbrowntherapy_redirect() {
+	if ( is_author() || is_tag() ) {
+		wp_safe_redirect( home_url(), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'sarahbrowntherapy_redirect' );
