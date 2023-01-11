@@ -79,10 +79,10 @@ get_header();
 							<a href="<?php the_permalink(); ?>">
 								<div class="service__image" style="background-image: url( '<?php echo esc_url( get_the_post_thumbnail_url() ); ?>' );"></div>
 								<div class="service__body">
-									<h4 class="service__title">
+									<h3 class="service__title">
 										<?php the_title(); ?>
 										<span class="title__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
-									</h4>
+									</h3>
 									<?php
 									if ( get_field( 'service_sub-heading' ) ) :
 										?>

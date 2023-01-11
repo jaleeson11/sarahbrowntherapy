@@ -68,9 +68,9 @@ function sarahbrowntherapy_hero() {
 			<?php $subheading_field = $post_type === 'service' ? 'service_sub-heading' : 'banner_sub-heading'; ?>
 
 			<?php if ( get_field( $subheading_field ) ) : ?>
-				<h5 class="entry-hero__sub-heading">
+				<p class="entry-hero__sub-heading">
 					<?php the_field( $subheading_field ); ?>
-				</h5><!-- .entry-hero__sub-heading -->
+				</p><!-- .entry-hero__sub-heading -->
 			<?php endif; ?>
 
 		</div><!-- .entry-hero__content -->
