@@ -5603,12 +5603,12 @@ textarea {
 }
 
 .site-section {
-  padding: 3.75rem 0;
+  padding: 3.33rem 0;
 }
 
 @media screen and (min-width: 767px) {
   .site-section {
-    padding: 6.25rem 0;
+    padding: 5.55rem 0;
   }
 }
 .site-footer {
@@ -6055,7 +6055,7 @@ textarea {
           flex: 1;
   -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 #services .service a {
   display: block;
@@ -6096,12 +6096,12 @@ textarea {
 }
 #services .services__footer {
   text-align: center;
-  padding-top: 20px;
 }
 
 .testimonial__body {
   background-color: #F0F6FC;
   padding: 20px 10px;
+  margin-bottom: 2.5rem;
 }
 .testimonial__body::before {
   font-family: "Dashicons";
@@ -6131,7 +6131,6 @@ textarea {
 }
 
 .testimonial__footer {
-  padding-top: 60px;
   text-align: center;
 }
 
