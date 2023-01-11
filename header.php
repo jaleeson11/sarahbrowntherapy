@@ -51,18 +51,3 @@
 			</div><!-- .site-header__inner -->
 		</div><!-- .container -->
 	</header><!-- #masthead -->
-
-	<style>
-		.entry-hero {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			min-height: 372px;
-			background-size: cover;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-color: $color__brand-light-blue;
-			text-align: center;
-		}
-	</style>
