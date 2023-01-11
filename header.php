@@ -34,7 +34,7 @@
 					?>
 				</div><!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<button class="menu-toggle" aria-label="Menu Toggle" aria-controls="primary-menu" aria-expanded="false">
 						<span></span>
 						<span></span>
 						<span></span>
