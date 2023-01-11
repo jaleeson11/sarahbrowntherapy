@@ -121,10 +121,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     siteNavigation.classList.toggle('toggled');
     if (button.getAttribute('aria-expanded') === 'true') {
       button.setAttribute('aria-expanded', 'false');
-      document.body.style.overflowY = 'visible';
+      document.body.style.overflow = 'visible';
     } else {
       button.setAttribute('aria-expanded', 'true');
-      document.body.style.overflowY = 'hidden';
+      document.body.style.overflow = 'hidden';
     }
   });
 
