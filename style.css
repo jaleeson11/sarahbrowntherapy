@@ -5742,7 +5742,7 @@ textarea {
   height: 3px;
   width: 35px;
   border-radius: 2px;
-  background-color: #7DA3C6;
+  background-color: red;
   margin: 8px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
