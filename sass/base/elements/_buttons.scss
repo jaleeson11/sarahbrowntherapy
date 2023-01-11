@@ -17,10 +17,10 @@ input[type="submit"],
 	cursor: pointer;
 	transition: all .3s ease;
 
-	// &:hover {
-	// 	border-color: $color__brand-gold;
-	// 	color: $color__brand-gold;
-	// }
+	&:hover {
+		border-color: $color__brand-gold;
+		color: $color__brand-gold;
+	}
 
 	&:active,
 	&:focus {

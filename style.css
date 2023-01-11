@@ -5431,6 +5431,15 @@ a {
   display: inline-block;
   text-decoration: none;
 }
+a:hover, a:focus, a:active {
+  color: #E6BE8A;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
 
 /* Forms
 --------------------------------------------- */
@@ -5453,6 +5462,14 @@ input[type=submit],
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover,
+.site-button:hover {
+  border-color: #E6BE8A;
+  color: #E6BE8A;
 }
 button:active, button:focus,
 input[type=button]:active,
