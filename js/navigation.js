@@ -12,7 +12,7 @@
 		return;
 	}
 
-	const button = siteNavigation.querySelector( '.menu-toggle' );
+	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
 
 	// Return early if the button doesn't exist.
 	if ( 'undefined' === typeof button ) {

@@ -99,7 +99,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   if (!siteNavigation) {
     return;
   }
-  var button = siteNavigation.querySelector('.menu-toggle');
+  var button = siteNavigation.getElementsByTagName('button')[0];
 
   // Return early if the button doesn't exist.
   if ('undefined' === typeof button) {
