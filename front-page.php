@@ -52,7 +52,7 @@ get_header();
 				$image_id  = attachment_url_to_postid( $image_url );
 				?>
 
-				<img class="about-me__image observe" src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
+				<img class="about-me__image observe" src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium_large' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
 				<div class="about-me__content observe">
 					<h2 class="about-me__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
 					<p class="about-me__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
@@ -77,7 +77,7 @@ get_header();
 
 						<div class="service observe">
 							<a href="<?php the_permalink(); ?>">
-								<div class="service__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'large' ) ); ?>' );"></div>
+								<div class="service__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></div>
 								<div class="service__body">
 									<h3 class="service__title">
 										<?php the_title(); ?>
