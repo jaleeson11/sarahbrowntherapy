@@ -15,7 +15,7 @@
 	if ( has_post_thumbnail() ) :
 		?>
 		<a href="<?php the_permalink(); ?>">
-			<div class="entry-thumbnail observe" style="background-image: url( '<?php echo esc_url( get_the_post_thumbnail_url() ); ?>' );"></div>
+			<div class="entry-thumbnail observe" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></div>
 		</a>
 		<?php
 	endif;
