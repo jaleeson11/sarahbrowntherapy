@@ -77,7 +77,7 @@ get_header();
 
 						<div class="service observe">
 							<a href="<?php the_permalink(); ?>">
-								<div class="service__image" style="background-image: url( '<?php echo esc_url( get_the_post_thumbnail_url() ); ?>' );"></div>
+								<div class="service__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'large' ) ); ?>' );"></div>
 								<div class="service__body">
 									<h3 class="service__title">
 										<?php the_title(); ?>

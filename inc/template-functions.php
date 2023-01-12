@@ -43,8 +43,8 @@ add_action( 'wp_head', 'sarahbrowntherapy_pingback_header' );
  */
 function sarahbrowntherapy_hero() {
 	$post_type = get_post_type();
-	$image_url = $post_type === 'page' ? get_field( 'banner_image' ) : get_the_post_thumbnail_url();
-
+	$image_url = $post_type === 'page' ? wp_get_attachment_image_url( get_field('banner_image', false, false), 'large' ) : wp_get_attachment_image_url( get_post_thumbnail_id(), 'large' );
+	
 	if ( ! $image_url ) {
 		return false;
 	} 
