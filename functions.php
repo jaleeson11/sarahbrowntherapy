@@ -189,7 +189,7 @@ add_filter( 'excerpt_more', 'sarahbrowntherapy_excerpt_more' );
  * Redirect templates.
  */
 function sarahbrowntherapy_redirect() {
-	if ( is_author() || is_tag() ) {
+	if ( is_author() || is_tag() || is_archive() || is_attachment() ) {
 		wp_safe_redirect( home_url(), 301 );
 		exit;
 	}
