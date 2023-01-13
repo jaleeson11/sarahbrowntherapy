@@ -75,9 +75,9 @@ function sarahbrowntherapy_custom_sections( $wp_customize ) {
 	);
 
 	$wp_customize->add_section(
-		'about_me',
+		'about_my_work',
 		array(
-			'title' => 'About Me Section',
+			'title' => 'About My Work',
 			'panel' => 'theme_options',
 		)
 	);
@@ -96,7 +96,7 @@ function sarahbrowntherapy_custom_sections( $wp_customize ) {
 			'about_me_heading',
 			array(
 				'type'     => 'text',
-				'section'  => 'about_me',
+				'section'  => 'about_my_work',
 				'label'    => 'Heading',
 			)
 		)
@@ -116,7 +116,7 @@ function sarahbrowntherapy_custom_sections( $wp_customize ) {
 			'about_me_text',
 			array(
 				'type'     => 'textarea',
-				'section'  => 'about_me',
+				'section'  => 'about_my_work',
 				'label'    => 'Text',
 			)
 		)
@@ -136,7 +136,7 @@ function sarahbrowntherapy_custom_sections( $wp_customize ) {
 			'about_me_button_text',
 			array(
 				'type'     => 'text',
-				'section'  => 'about_me',
+				'section'  => 'about_my_work',
 				'label'    => 'Button Text',
 			)
 		)
@@ -150,7 +150,7 @@ function sarahbrowntherapy_custom_sections( $wp_customize ) {
 			'about_me_button_link',
 			array(
 				'type'        => 'dropdown-pages',
-				'section'     => 'about_me',
+				'section'     => 'about_my_work',
 				'label'       => 'Button Link',
 				'description' => 'The page that the button links to',
 			)
@@ -164,7 +164,7 @@ function sarahbrowntherapy_custom_sections( $wp_customize ) {
 			$wp_customize,
 			'about_me_image',
 			array(
-				'section'  => 'about_me',
+				'section'  => 'about_my_work',
 				'label'    => 'Image',
 			)
 		)
