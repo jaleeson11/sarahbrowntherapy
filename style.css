@@ -5987,6 +5987,7 @@ textarea {
 .entry-list-item .entry-header .entry-title {
   margin-top: 1.2rem;
   margin-bottom: 0;
+  font-size: 2.5rem;
 }
 
 .error-404 {
@@ -6006,7 +6007,7 @@ textarea {
         flex-wrap: wrap;
   }
   .entry-list-item .entry-thumbnail {
-    min-width: 352px;
+    min-width: 422px;
   }
   .entry-list-item .entry-list-item__body {
     -webkit-box-flex: 1;

@@ -24,9 +24,9 @@
 	<div class="entry-list-item__body observe">
 		<header class="entry-header">
 			<a href="<?php the_permalink(); ?>">
-				<h3 class="entry-title">
+				<h2 class="entry-title">
 					<?php the_title(); ?>
-				</h3><!-- .entry-title -->
+				</h2><!-- .entry-title -->
 			</a>
 
 			<?php if ( get_post_type() === 'post' ) : ?>
