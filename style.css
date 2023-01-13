@@ -5450,12 +5450,13 @@ input[type=submit],
 .site-button {
   border: 2px solid;
   border-color: #73D8F4;
-  border-radius: 25px;
+  border-radius: 50px;
   background: none;
   color: #73D8F4;
   line-height: 1;
   text-transform: uppercase;
   font-weight: 600;
+  letter-spacing: 1px;
   text-align: center;
   padding: 0.8rem;
   min-width: 150px;
@@ -6079,6 +6080,7 @@ textarea {
 }
 #services .service .service__body .service__title {
   margin-top: 0;
+  font-size: 2rem;
 }
 #services .service .service__body .service__title .title__wave {
   display: block;
@@ -6143,11 +6145,11 @@ textarea {
             flex-direction: row;
   }
   #about-me .about-me__content {
-    margin-left: 50px;
+    margin-left: 2.5rem;
     text-align: left;
   }
   #about-me .about-me__image {
-    max-width: 390px;
+    height: 458px;
   }
   #services {
     -webkit-box-orient: horizontal;
@@ -6161,7 +6163,7 @@ textarea {
             justify-content: space-between;
   }
   #services .service:not(:nth-child(3)) {
-    margin-right: 90px;
+    margin-right: 3.5rem;
   }
   #services .services__footer {
     -webkit-box-flex: 0;

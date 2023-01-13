@@ -47,6 +47,7 @@
 
 			.service__title {
 				margin-top: 0;
+				font-size: 2rem;
 
 				.title__wave {
 					display: block;
@@ -119,12 +120,12 @@
 		flex-direction: row;
 
 		.about-me__content {
-			margin-left: 50px;
+			margin-left: 2.5rem;
 			text-align: left;
 		}
 
 		.about-me__image {
-			max-width: 390px;
+			height: 458px;
 		}
 	}
 
@@ -134,7 +135,7 @@
 		justify-content: space-between;
 
 		.service:not(:nth-child(3)) {
-			margin-right: 90px;
+			margin-right: 3.5rem;
 		}
 
 		.services__footer {
