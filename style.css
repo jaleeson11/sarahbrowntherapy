@@ -5238,13 +5238,13 @@ textarea {
   color: #000;
   font-family: "Cormorant", serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.13rem;
   line-height: 1.75;
 }
 
 @media screen and (min-width: 991px) {
   html {
-    font-size: 18px;
+    font-size: 1.25rem;
   }
 }
 h1, h2, h3, h4, h5 {
