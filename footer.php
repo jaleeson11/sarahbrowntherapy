@@ -24,7 +24,7 @@
 						</p>
 					</div><!-- .site-contact-banner__location -->
 					<div class="site-contact-banner__email">
-						<a href="mailto: <?php echo esc_url( get_option( 'admin_email' ) ); ?>">
+						<a href="mailto: <?php echo esc_html( get_option( 'admin_email' ) ); ?>">
 							<h4 class="site-contact-banner__heading">
 								<?php echo esc_html( get_theme_mod( 'contact_banner_email' ) ); ?>
 							</h4>
@@ -35,7 +35,7 @@
 					</div><!-- .site-contact-banner__email -->
 					<div class="site-contact-banner__phone">
 						<?php $phone_num = get_theme_mod( 'contact_banner_phone' ); ?>
-						<a href="tel: <?php echo esc_url( $phone_num ); ?>">
+						<a href="tel: <?php echo esc_html( $phone_num ); ?>">
 							<h4 class="site-contact-banner__heading">
 								<?php echo esc_html( $phone_num ); ?>
 							</h4>
