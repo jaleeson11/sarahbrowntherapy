@@ -1,48 +1,23 @@
-$multiplier__small: 0.6;
-$multiplier__medium: 0.8;
-
 h1, h2, h3, h4, h5 {
 	margin: 3rem 0 1.38rem;
 	font-family: $font__heading;
 	font-weight: 500;
 	color: $color__brand-royal-blue;
 	line-height: $font__line-height-heading;
-	clear: both;
 }
-
+  
 h1 {
 	margin-top: 0;
-	@include to_rem($font-size__h1 * $multiplier__medium)
+	font-size: var(--font-size-h1);
 }
 
-h2 {@include to_rem($font-size__h2 * $multiplier__medium)}
+h2 {font-size: var(--font-size-h2);}
 
-h3 {@include to_rem($font-size__h3 * $multiplier__medium)}
+h3 {font-size: var(--font-size-h3);}
 
-h4 {@include to_rem($font-size__h4 * $multiplier__medium)}
+h4 {font-size: var(--font-size-h4);}
 
-h5 {@include to_rem($font-size__h5 * $multiplier__medium)}
+h5 {font-size: var(--font-size-h5);}
 
-@media screen and (min-width: $screen__small) {
-	h1 {@include to_rem($font-size__h1 * $multiplier__medium)}
+small {font-size: var(--font-size-small);}
 
-	h2 {@include to_rem($font-size__h2 * $multiplier__medium)}
-
-	h3 {@include to_rem($font-size__h3 * $multiplier__medium)}
-
-	h4 {@include to_rem($font-size__h4 * $multiplier__medium)}
-
-	h5 {@include to_rem($font-size__h5 * $multiplier__medium)}
-}
-
-@media screen and (min-width: $screen__large) {
-	h1 {@include to_rem($font-size__h1)}
-
-	h2 {@include to_rem($font-size__h2)}
-
-	h3 {@include to_rem($font-size__h3)}
-
-	h4 {@include to_rem($font-size__h4)}
-
-	h5 {@include to_rem($font-size__h5)}
-}

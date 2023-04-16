@@ -1,3 +1,5 @@
+html {font-size: var(--font-size);}
+
 body,
 button,
 input,
@@ -7,14 +9,11 @@ textarea {
 	color: $color__text-main;
 	font-family: $font__main;
 	font-weight: 400;
-	font-size: 1.13rem;
 	line-height: $font__line-height-body;
 }
 
-@media screen and (min-width: $screen__large) {
-	html {
-		font-size: 1.25rem;
-	}
+@include media-breakpoint-up(lg) {
+	html {font-size: calc(var(--font-size) * 1.25);}
 }
 
 @import "headings";
