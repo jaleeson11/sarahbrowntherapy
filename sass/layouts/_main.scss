@@ -1,9 +1,9 @@
 .site-section {
-    padding: 3.33rem 0;
+    padding: var(--space-xl) 0;
 }
 
-@media screen and (min-width: $screen__medium) {
+@include media-breakpoint-up(lg) {
     .site-section {
-        padding: 5.55rem 0;
+        padding: var(--space-xxl) 0;
     }
 }
