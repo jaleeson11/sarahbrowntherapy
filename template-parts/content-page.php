@@ -21,8 +21,9 @@
 	else : 
 		$post_hero; 
 	endif;
-	?>
 
+	if ( ! is_front_page() ) :
+		?>
 	<div class="container">
 		<div class="entry-content">
 			<?php
@@ -37,4 +38,5 @@
 			?>
 		</div><!-- .entry-content -->
 	</div>
+		<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
