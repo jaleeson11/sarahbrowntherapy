@@ -1,20 +1,3 @@
-#about-me {
-    display: flex;
-    flex-direction: column;
-
-    .about-me__image {
-        box-shadow: 0 1px 3px 2px rgba(0,0,0,0.1);
-    }
-
-	.about-me__content {
-		text-align: center;
-
-		.about-me__heading {
-			margin-top: 1.2rem;
-		}
-	}
-}
-
 #services {
 	display: flex;
 	flex-direction: column;
@@ -116,19 +99,6 @@
 }
 
 @media screen and (min-width: $screen__large) {
-	#about-me {
-		flex-direction: row;
-
-		.about-me__content {
-			margin-left: 2.5rem;
-			text-align: left;
-		}
-
-		.about-me__image {
-			height: 458px;
-		}
-	}
-
 	#services {
 		flex-direction: row;
 		flex-wrap: wrap;
