@@ -62,57 +62,64 @@ get_header();
 				</div>
 			</section><!-- #about-me -->
 
+			<section class="site-section services">
+				<header class="services__header">
+					<h2 class="services__title"><?php echo esc_html( 'Services' ); ?></h2>
+				</header>
+				<div class="services__list flex-group flex-group--gap-lg">
+					<?php
+					$services = new WP_Query(
+						array(
+							'post_type'      => 'service',
+							'posts_per_page' => 3,
+						)
+					);
 
-			<section id="services" class="site-section">
-				<?php
-				$services = new WP_Query(
-					array(
-						'post_type'      => 'service',
-						'posts_per_page' => 3,
-					)
-				);
+					if ( $services->have_posts() ) {
+						while ( $services->have_posts() ) {
+							$services->the_post();
+							?>
 
-				if ( $services->have_posts() ) {
-					while ( $services->have_posts() ) {
-						$services->the_post();
-						?>
-
-						<div class="service observe">
-							<a href="<?php the_permalink(); ?>">
-								<div class="service__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></div>
-								<div class="service__body">
-									<h3 class="service__title">
-										<?php the_title(); ?>
-										<span class="title__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
-									</h3>
+							<div class="services__item card observe">
+								<a href="<?php the_permalink(); ?>" class="card__link d-block">
+									<div class="card__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></div>
+								</a>
+								<div class="card__body">
+									<a href="<?php the_permalink(); ?>" class="card__link d-block">
+										<h3 class="card__title h4">
+											<?php the_title(); ?>
+											<span class="card__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
+										</h3>
+									</a>
 									<?php
 									if ( get_field( 'service_sub-heading' ) ) :
 										?>
-										<p class="service__sub-heading">
-											<?php the_field( 'service_sub-heading' ); ?>
+										<p class="card__text">
+											<?php echo esc_html( wp_trim_words( get_the_excerpt(), 15 ) ); ?>
 										</p>
 										<?php
 									endif;
 									?>
+									<a href="<?php the_permalink(); ?>" class="card__link"><?php echo esc_html( 'Read More' ); ?></a>
 								</div>
-							</a>
-						</div>
+							</div>
 
-						<?php
-					}
-					
-					?>
+							<?php
+						}
+						
+						?>
+					</div>
+
 					<footer class="services__footer observe">
 						<a href="<?php the_permalink( get_page_by_path( 'services' ) ); ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
 					</footer>
 					<?php
-				} else {
+					} else {
+						?>
+						<h2><?php echo esc_html( 'Looks like there\'s no services to display...' ); ?></h2>
+						<?php
+					}
 					?>
-					<h2><?php echo esc_html( 'Looks like there\'s no services to display...' ); ?></h2>
-					<?php
-				}
-				?>
-
 			</section><!-- #services -->
 
 			<section id="testimonial" class="site-section">

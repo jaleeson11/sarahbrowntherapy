@@ -1,0 +1,40 @@
+.card {
+    min-width: 10rem;
+    border: .15rem solid #ccc;
+    border-radius: .8rem;
+
+    &:hover {
+        box-shadow: 0 1px 4px 3px #00000026;
+    }
+
+    .card__image {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: $color__brand-light-blue;
+        padding-top: 56.25%;
+        border-radius: .8rem;
+        margin: var(--space-sm);
+    }
+
+    .card__body {
+        padding: var(--space-md);
+        overflow-wrap: break-word;
+
+        .card__title {
+            margin-top: 0;
+            margin-bottom: auto;
+            text-align: center;
+
+            .card__wave {
+                display: block;
+                background-size: 1.75rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 1.75rem;
+                width: 1.75rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -4202,6 +4202,82 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --space-xxl: calc(5.25 * var(--space-unit));
 }
 
+.flex-group {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .flex-group {
+    flex-direction: row;
+  }
+}
+.flex-group > * {
+  flex: 1;
+}
+
+.flex-group--gap-xxs {
+  margin-left: calc(-1 * var(--space-xxs));
+  margin-bottom: calc(-1 * var(--space-xxs));
+}
+.flex-group--gap-xxs > * {
+  margin-left: var(--space-xxs);
+  margin-bottom: var(--space-xxs);
+}
+
+.flex-group--gap-xs {
+  margin-left: calc(-1 * var(--space-xs));
+  margin-bottom: calc(-1 * var(--space-xs));
+}
+.flex-group--gap-xs > * {
+  margin-left: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.flex-group--gap-sm {
+  margin-left: calc(-1 * var(--space-sm));
+  margin-bottom: calc(-1 * var(--space-sm));
+}
+.flex-group--gap-sm > * {
+  margin-left: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.flex-group--gap-md {
+  margin-left: calc(-1 * var(--space-md));
+  margin-bottom: calc(-1 * var(--space-md));
+}
+.flex-group--gap-md > * {
+  margin-left: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.flex-group--gap-lg {
+  margin-left: calc(-1 * var(--space-lg));
+  margin-bottom: calc(-1 * var(--space-lg));
+}
+.flex-group--gap-lg > * {
+  margin-left: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.flex-group--gap-xl {
+  margin-left: calc(-1 * var(--space-xl));
+  margin-bottom: calc(-1 * var(--space-xl));
+}
+.flex-group--gap-xl > * {
+  margin-left: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.flex-group--gap-xxl {
+  margin-left: calc(-1 * var(--space-xxl));
+  margin-bottom: calc(-1 * var(--space-xxl));
+}
+.flex-group--gap-xxl > * {
+  margin-left: var(--space-xxl);
+  margin-bottom: var(--space-xxl);
+}
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -5235,56 +5311,6 @@ textarea {
     max-width: 800px;
   }
 }
-#services {
-  display: flex;
-  flex-direction: column;
-}
-#services .service {
-  flex: 1;
-  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2.5rem;
-}
-#services .service a {
-  display: block;
-}
-#services .service:hover {
-  box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.15);
-}
-#services .service .service__image {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #F0F6FC;
-  padding-top: 75%;
-  width: auto;
-}
-#services .service .service__body {
-  padding: 30px 15px;
-  text-align: center;
-}
-#services .service .service__body .service__title {
-  margin-top: 0;
-  font-size: 2rem;
-}
-#services .service .service__body .service__title .title__wave {
-  display: block;
-  background-size: 35px;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 35px;
-  width: 35px;
-  margin: 0 auto;
-}
-#services .service .service__body .service__sub-heading {
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #AAC9E6;
-}
-#services .services__footer {
-  text-align: center;
-}
-
 .testimonial__body {
   background-color: #F0F6FC;
   padding: 20px 10px;
@@ -5322,17 +5348,6 @@ textarea {
 }
 
 @media screen and (min-width: 991px) {
-  #services {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  #services .service:not(:nth-child(3)) {
-    margin-right: 3.5rem;
-  }
-  #services .services__footer {
-    flex: 0 0 100%;
-  }
   .testimonial__body {
     padding: 50px;
   }
@@ -5419,6 +5434,55 @@ textarea {
     height: 23rem;
   }
 }
+.services__header {
+  margin-bottom: var(--space-xl);
+}
+.services__header .services__title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.services__footer {
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.card {
+  min-width: 10rem;
+  border: 0.15rem solid #ccc;
+  border-radius: 0.8rem;
+}
+.card:hover {
+  box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.1490196078);
+}
+.card .card__image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #F0F6FC;
+  padding-top: 56.25%;
+  border-radius: 0.8rem;
+  margin: var(--space-sm);
+}
+.card .card__body {
+  padding: var(--space-md);
+  overflow-wrap: break-word;
+}
+.card .card__body .card__title {
+  margin-top: 0;
+  margin-bottom: auto;
+  text-align: center;
+}
+.card .card__body .card__title .card__wave {
+  display: block;
+  background-size: 1.75rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1.75rem;
+  width: 1.75rem;
+  margin: 0 auto;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
