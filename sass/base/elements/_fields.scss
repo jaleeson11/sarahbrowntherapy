@@ -16,13 +16,13 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	border: none;
-	background-color: $color__brand-light-blue;
+	background-color: $color__brand-beige;
 	padding: .5rem 1rem;
 	font-size: 1.5rem;
 	width: 100%;
 
 	&::placeholder {
-		color: $color__brand-baby-blue;
+		color: $color__brand-stone-blue;
 	}
 
 	&:focus {
