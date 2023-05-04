@@ -4804,7 +4804,8 @@ input[type=reset],
 input[type=submit],
 .site-button {
   border-radius: 0.5rem;
-  border: none;
+  border: 0.2rem solid;
+  border-color: transparent;
   background-color: #4BB4DE;
   color: #fff;
   line-height: 1.15;
@@ -4815,6 +4816,7 @@ input[type=submit],
   min-width: 10ch;
   min-height: 2.5rem;
   cursor: pointer;
+  outline: none;
   touch-action: manipulation;
   transition: all 0.3s ease;
 }
@@ -4835,7 +4837,16 @@ input[type=submit]:active,
 input[type=submit]:focus,
 .site-button:active,
 .site-button:focus {
-  outline: 0.2rem solid #3B8AC4;
+  border-color: #3B8AC4;
+}
+@supports selector(:focus-visible) {
+  button:focus-visible,
+  input[type=button]:focus-visible,
+  input[type=reset]:focus-visible,
+  input[type=submit]:focus-visible,
+  .site-button:focus-visible {
+    border-color: #3B8AC4;
+  }
 }
 
 input[type=text],

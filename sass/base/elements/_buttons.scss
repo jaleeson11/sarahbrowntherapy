@@ -4,7 +4,8 @@ input[type="reset"],
 input[type="submit"],
 .site-button {
 	border-radius: .5rem;
-	border: none;
+	border: .2rem solid;
+	border-color: transparent;
 	background-color: $color__brand-turquoise-blue;
 	color: #fff;
 	line-height: 1.15;
@@ -15,6 +16,7 @@ input[type="submit"],
 	min-width: 10ch;
 	min-height: 2.5rem;
 	cursor: pointer;
+	outline: none;
 	touch-action: manipulation;
 	transition: all .3s ease;
 
@@ -25,6 +27,12 @@ input[type="submit"],
 
 	&:active,
 	&:focus {
-		outline: .2rem solid $color__brand-steel-blue;
+		border-color: $color__brand-steel-blue;
+	}
+
+	@supports selector(:focus-visible) {
+		&:focus-visible {
+			border-color: $color__brand-steel-blue;
+		}
 	}
 }
