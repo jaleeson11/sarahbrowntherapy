@@ -4803,20 +4803,19 @@ input[type=button],
 input[type=reset],
 input[type=submit],
 .site-button {
-  border: 2px solid;
-  border-color: #4BB4DE;
-  border-radius: 50px;
-  background: none;
-  color: #4BB4DE;
-  line-height: 1;
-  text-transform: uppercase;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #4BB4DE;
+  color: #fff;
+  line-height: 1.15;
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 1px;
   text-align: center;
-  padding: 0.8rem;
-  min-width: 150px;
+  padding: var(--space-sm) var(--space-md);
+  min-width: 10ch;
+  min-height: 2.5rem;
   cursor: pointer;
+  touch-action: manipulation;
   transition: all 0.3s ease;
 }
 button:hover,
@@ -4824,8 +4823,8 @@ input[type=button]:hover,
 input[type=reset]:hover,
 input[type=submit]:hover,
 .site-button:hover {
-  border-color: #4BB4DE;
-  color: #4BB4DE;
+  background-color: #259ac9;
+  color: #fff;
 }
 button:active, button:focus,
 input[type=button]:active,
@@ -4836,19 +4835,9 @@ input[type=submit]:active,
 input[type=submit]:focus,
 .site-button:active,
 .site-button:focus {
-  border-color: #4BB4DE;
-  color: #4BB4DE;
+  outline: 0.2rem solid #3B8AC4;
 }
 
-@media screen and (max-width: 575px) {
-  button,
-  input[type=button],
-  input[type=reset],
-  input[type=submit],
-  .site-button {
-    width: 100%;
-  }
-}
 input[type=text],
 input[type=email],
 input[type=url],
