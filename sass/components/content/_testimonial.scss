@@ -1,0 +1,44 @@
+.testimonial {
+	background-color: $color__brand-stone-blue;
+    color: #fff;
+    border-radius: .8rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+
+	.testimonial__quote {
+        margin: 0;
+	    padding: var(--space-lg);
+
+        p {
+            margin: 0;
+        }
+
+        &::before {
+            font-family: 'Dashicons';
+            content: '\f122';
+            display: block;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+		.testimonial__footer {
+			margin-top: var(--space-sm);
+
+            .testimonial__client {
+                font-weight: 600;
+            }
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+    .testimonial--lg {
+        &::before {
+            font-size: 3rem;
+        }
+
+        .testimonial__quote {
+            padding: var(--space-xl);
+            font-size: 1.5rem;
+        }
+    }
+}

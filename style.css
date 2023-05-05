@@ -5364,33 +5364,13 @@ textarea {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-auto-rows: 20px;
 }
-.testimonials-grid .entry-testimonial {
+.testimonials-grid > * {
   display: flex;
   align-items: center;
-  background-color: #8AA6BA;
-  color: #fff;
 }
-.testimonials-grid .entry-testimonial:nth-child(even) {
+.testimonials-grid > *:nth-child(even) {
   background-color: #EFDBCB;
   color: #345DA7;
-}
-.testimonials-grid .entry-testimonial .entry-quote {
-  padding: 35px;
-}
-.testimonials-grid .entry-testimonial .entry-quote p {
-  margin: 0;
-}
-.testimonials-grid .entry-testimonial .entry-quote::before {
-  font-family: "Dashicons";
-  font-size: 1.8rem;
-  content: "\f122";
-  display: block;
-  text-align: center;
-}
-.testimonials-grid .entry-testimonial .entry-quote .entry-quote__footer {
-  padding-top: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
 }
 
 .observe {
@@ -5474,16 +5454,43 @@ textarea {
   margin-bottom: auto;
   text-align: center;
 }
-.card .card__body .card__title .card__wave {
+
+.testimonial {
+  background-color: #8AA6BA;
+  color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+.testimonial .testimonial__quote {
+  margin: 0;
+  padding: var(--space-lg);
+}
+.testimonial .testimonial__quote p {
+  margin: 0;
+}
+.testimonial .testimonial__quote::before {
+  font-family: "Dashicons";
+  content: "\f122";
   display: block;
-  background-size: 1.75rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 1.75rem;
-  width: 1.75rem;
-  margin: 0 auto;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.testimonial .testimonial__quote .testimonial__footer {
+  margin-top: var(--space-sm);
+}
+.testimonial .testimonial__quote .testimonial__footer .testimonial__client {
+  font-weight: 600;
 }
 
+@media (min-width: 768px) {
+  .testimonial--lg::before {
+    font-size: 3rem;
+  }
+  .testimonial--lg .testimonial__quote {
+    padding: var(--space-xl);
+    font-size: 1.5rem;
+  }
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {

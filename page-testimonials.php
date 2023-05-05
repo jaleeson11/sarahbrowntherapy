@@ -43,13 +43,13 @@ get_header();
 								$testimonials->the_post();
 								?>
 
-								<div class="entry-testimonial">
+								<div class="testimonial">
 
-									<blockquote class="entry-quote">
+									<blockquote class="testimonial__quote">
 										<?php the_content(); ?>
 
-										<footer class="entry-quote__footer">
-											<span class="entry-quote__client">
+										<footer class="testimonial__footer">
+											<span class="testimonial__client">
 												<?php
 												if ( get_field( 'client_name' ) ) {
 													the_field( 'client_name' );
@@ -58,11 +58,11 @@ get_header();
 												}
 												?>
 											</span>
-										</footer><!-- .entry-quote__footer -->
+										</footer><!-- .testimonial__footer -->
 
-									</blockquote><!-- .entry-quote -->
+									</blockquote><!-- .testimonial__quote -->
 
-								</div><!-- .entry-testimonial -->
+								</div><!-- .testimonial -->
 
 								<?php
 							}

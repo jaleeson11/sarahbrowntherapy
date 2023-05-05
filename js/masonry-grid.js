@@ -3,12 +3,14 @@
         const grid = $( '.testimonials-grid' ),
         rowHeight = parseInt( grid.css( 'grid-auto-rows' ) ),
         rowGap = parseInt( grid.css( 'grid-row-gap' ) ),
-        rowSpan = Math.ceil( ( item.querySelector( '.entry-quote' ).getBoundingClientRect().height + rowGap ) / ( rowHeight + rowGap ) );
+        rowSpan = Math.ceil( ( item.querySelector( '.testimonial__quote' ).getBoundingClientRect().height + rowGap ) / ( rowHeight + rowGap ) );
         item.style.gridRowEnd = 'span ' + rowSpan;
+
+        console.log(item.getBoundingClientRect().height);
     }
 
     function resizeAllGridItems(){
-        const items = $( '.entry-testimonial' );
+        const items = $( '.testimonial' );
         items.each( ( index, item ) => {
             resizeGridItem( item )
         } );
