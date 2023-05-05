@@ -31,9 +31,9 @@ get_header();
 		);
 
 		?>
-		<section class="site-section">
+		<div class="container">
 
-			<div class="container">
+			<div class="custom-content">
 					<?php
 					if ( $testimonials->have_posts() ) {
 						?>
@@ -97,9 +97,9 @@ get_header();
 						<?php
 					}
 					?>
-			</div><!-- .container -->
+			</div><!-- .custom-content -->
 
-		</section><!-- .site-section -->
+		</div><!-- .container -->
 
 	</main><!-- #main -->
 

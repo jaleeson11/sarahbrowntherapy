@@ -23,6 +23,16 @@
 	margin-top: 2.5rem;
 }
 
+.custom-content {
+    margin-top: var(--space-xl);
+}
+
+@include media-breakpoint-up(lg) {
+    .custom-content {
+        margin-top: var(--space-xxl);
+    }
+}
+
 .pagination-links,
 .page-links {
 	text-align: center;

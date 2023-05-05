@@ -5184,6 +5184,15 @@ textarea {
   margin-top: 2.5rem;
 }
 
+.custom-content {
+  margin-top: var(--space-xl);
+}
+
+@media (min-width: 992px) {
+  .custom-content {
+    margin-top: var(--space-xxl);
+  }
+}
 .pagination-links,
 .page-links {
   text-align: center;

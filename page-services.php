@@ -31,8 +31,8 @@ get_header();
 		);
 
 		?>
-		<section class="site-section">
-			<div class="container">
+		<div class="container">
+			<div class="custom-content">
 				<?php
 				if ( $services->have_posts() ) {
 					while ( $services->have_posts() ) {
@@ -70,8 +70,8 @@ get_header();
 				wp_reset_postdata();
 				?>
 
-			</div><!-- .container -->
-		</section><!-- .site-section -->
+			</div><!-- .custom-content -->
+		</div><!-- .container -->
 
 	</main><!-- #main -->
 
