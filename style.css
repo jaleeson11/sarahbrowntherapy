@@ -5320,53 +5320,6 @@ textarea {
     max-width: 800px;
   }
 }
-.testimonial__body {
-  background-color: #EFDBCB;
-  padding: 20px 10px;
-  margin-bottom: 2.5rem;
-}
-.testimonial__body::before {
-  font-family: "Dashicons";
-  content: "\f122";
-  display: block;
-  text-align: center;
-  font-size: 3rem;
-  color: #345DA7;
-}
-.testimonial__body .quote {
-  font-weight: 500;
-  font-size: 1.25rem;
-  color: #345DA7;
-}
-.testimonial__body .quote p {
-  margin-top: 0;
-}
-.testimonial__body .quote .quote__footer {
-  margin-top: 20px;
-}
-.testimonial__body .quote .quote__footer .quote__client {
-  display: block;
-  text-align: center;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.testimonial__footer {
-  text-align: center;
-}
-
-@media screen and (min-width: 991px) {
-  .testimonial__body {
-    padding: 50px;
-  }
-  .testimonial__body::before {
-    font-size: 4rem;
-  }
-  .testimonial__body .quote {
-    font-size: 2rem;
-  }
-}
 .testimonials-grid {
   display: grid;
   grid-gap: 40px;
@@ -5420,19 +5373,6 @@ textarea {
     height: 23rem;
   }
 }
-.services__header {
-  margin-bottom: var(--space-xl);
-}
-.services__header .services__title {
-  text-align: center;
-  margin-top: 0;
-}
-
-.services__footer {
-  margin-top: var(--space-xl);
-  text-align: center;
-}
-
 .card {
   min-width: 10rem;
   border: 0.15rem solid #EFDBCB;
