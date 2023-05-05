@@ -1,9 +1,0 @@
-.site-section {
-    padding: var(--space-xl) 0;
-}
-
-@include media-breakpoint-up(lg) {
-    .site-section {
-        padding: var(--space-xxl) 0;
-    }
-}

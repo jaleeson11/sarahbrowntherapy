@@ -46,129 +46,138 @@ get_header();
 
 		<div class="container">
 
-			<section id="about-me" class="site-section">
-				<div class="image-cta-block observe">
-					<?php
-					$image_url = get_theme_mod( 'about_me_image' );
-					$image_id  = attachment_url_to_postid( $image_url );
-					?>
+			<div class="custom-content">
 
-					<img class="image-cta-block__image" src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium_large' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
-					<div class="image-cta-block__content">
-						<h2 class="image-cta-block__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
-						<p class="image-cta-block__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
-						<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'about_me_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'about_me_button_text' ) ); ?></a>
+				<section class="section">
+					<div class="image-cta-block observe">
+						<?php
+						$image_url = get_theme_mod( 'about_me_image' );
+						$image_id  = attachment_url_to_postid( $image_url );
+						?>
+
+						<img class="image-cta-block__image" src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium_large' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
+						<div class="image-cta-block__content">
+							<h2 class="image-cta-block__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
+							<p class="image-cta-block__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
+							<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'about_me_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'about_me_button_text' ) ); ?></a>
+						</div>
 					</div>
-				</div>
-			</section><!-- #about-me -->
+				</section>
 
-			<section class="site-section services">
-				<header class="services__header">
-					<h2 class="services__title"><?php echo esc_html( 'Services' ); ?></h2>
-				</header>
-				<div class="services__list flex-group flex-group--gap-lg">
+				<section class="section">
+					<header class="section__header">
+						<h2 class="section__title">
+							<?php echo esc_html( 'My Services' ); ?>
+							<span class="section__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
+						</h2>
+					</header>
+					<div class="flex-group flex-group--gap-lg">
+						<?php
+						$services = new WP_Query(
+							array(
+								'post_type'      => 'service',
+								'posts_per_page' => 3,
+							)
+						);
+
+						if ( $services->have_posts() ) {
+							while ( $services->have_posts() ) {
+								$services->the_post();
+								?>
+
+								<div class="card observe">
+									<a href="<?php the_permalink(); ?>" class="card__link d-block">
+										<div class="card__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></div>
+									</a>
+									<div class="card__body">
+										<a href="<?php the_permalink(); ?>" class="card__link d-block">
+											<h3 class="card__title h4"><?php the_title(); ?></h3>
+										</a>
+										<?php
+										if ( get_field( 'service_sub-heading' ) ) :
+											?>
+											<p class="card__text">
+												<?php echo esc_html( wp_trim_words( get_the_excerpt(), 15 ) ); ?>
+											</p>
+											<?php
+										endif;
+										?>
+									</div>
+								</div>
+
+								<?php
+							}
+							
+							?>
+						</div>
+
+						<footer class="section__footer observe">
+							<a href="<?php the_permalink( get_page_by_path( 'services' ) ); ?>" class="site-button"><?php echo esc_html( 'All Services I Offer' ); ?></a>
+						</footer>
+						<?php
+						} else {
+							?>
+							<h2><?php echo esc_html( 'Looks like there\'s no services to display...' ); ?></h2>
+							<?php
+						}
+						?>
+				</section>
+
+				<section class="section">
+					<header class="section__header">
+						<h2 class="section__title">
+							<?php echo esc_html( 'Testimonials' ); ?>
+							<span class="section__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
+						</h2>
+					</header>
 					<?php
-					$services = new WP_Query(
+					$testimonial = new WP_Query(
 						array(
-							'post_type'      => 'service',
-							'posts_per_page' => 3,
+							'post_type'      => 'testimonial',
+							'posts_per_page' => 1,
+							'orderby'        => 'rand',
 						)
 					);
 
-					if ( $services->have_posts() ) {
-						while ( $services->have_posts() ) {
-							$services->the_post();
+					if ( $testimonial->have_posts() ) {
+						while ( $testimonial->have_posts() ) {
+							$testimonial->the_post();
 							?>
 
-							<div class="services__item card observe">
-								<a href="<?php the_permalink(); ?>" class="card__link d-block">
-									<div class="card__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></div>
-								</a>
-								<div class="card__body">
-									<a href="<?php the_permalink(); ?>" class="card__link d-block">
-										<h3 class="card__title h4">
-											<?php the_title(); ?>
-											<span class="card__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
-										</h3>
-									</a>
-									<?php
-									if ( get_field( 'service_sub-heading' ) ) :
-										?>
-										<p class="card__text">
-											<?php echo esc_html( wp_trim_words( get_the_excerpt(), 15 ) ); ?>
-										</p>
-										<?php
-									endif;
-									?>
-									<a href="<?php the_permalink(); ?>" class="card__link"><?php echo esc_html( 'Read More' ); ?></a>
-								</div>
+							<div class="testimonial testimonial--lg observe">
+								<blockquote class="testimonial__quote">
+									<?php echo esc_html( wp_trim_words( get_the_content(), 100 ) ); ?>
+									<footer class="testimonial__footer">
+										<span class="testimonial__client">
+											<?php
+											if ( get_field( 'client_name' ) ) {
+												the_field( 'client_name' );
+											} else {
+												echo esc_html( 'Anonymous' );
+											}
+											?>
+										</span>
+									</footer>
+								</blockquote>
 							</div>
 
 							<?php
 						}
-						
-						?>
-					</div>
 
-					<footer class="services__footer observe">
-						<a href="<?php the_permalink( get_page_by_path( 'services' ) ); ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
-					</footer>
-					<?php
+						?>
+						<footer class="section__footer observe">
+							<a href="<?php the_permalink( get_page_by_path( 'testimonials' ) ); ?>" class="site-button"><?php echo esc_html( 'More Client Reviews' ); ?></a>
+						</footer>
+						<?php
 					} else {
 						?>
-						<h2><?php echo esc_html( 'Looks like there\'s no services to display...' ); ?></h2>
+						<h2><?php echo esc_html( 'Looks like there\'s no testimonials to display...' ); ?></h2>
 						<?php
 					}
 					?>
-			</section><!-- #services -->
+				</section>
 
-			<section id="testimonial" class="site-section">
-				<?php
-				$testimonial = new WP_Query(
-					array(
-						'post_type'      => 'testimonial',
-						'posts_per_page' => 1,
-						'orderby'        => 'rand',
-					)
-				);
-
-				if ( $testimonial->have_posts() ) {
-					while ( $testimonial->have_posts() ) {
-						$testimonial->the_post();
-						?>
-
-						<div class="testimonial__body observe">
-							<blockquote class="quote">
-								<?php echo esc_html( wp_trim_words( get_the_content(), 100 ) ); ?>
-								<footer class="quote__footer">
-									<span class="quote__client">
-										<?php
-										if ( get_field( 'client_name' ) ) {
-											the_field( 'client_name' );
-										} else {
-											echo esc_html( 'Anonymous' );
-										}
-										?>
-									</span>
-								</footer>
-							</blockquote>
-						</div>
-
-						<?php
-					}
-
-					?>
-					<footer class="testimonial__footer observe">
-						<a href="<?php the_permalink( get_page_by_path( 'testimonials' ) ); ?>" class="site-button"><?php echo esc_html( 'See More' ); ?></a>
-					</footer>
-					<?php
-				} else {
-					?>
-					<h2><?php echo esc_html( 'Looks like there\'s no testimonials to display...' ); ?></h2>
-					<?php
-				}
-				?>
-			</section><!-- #testimonial -->
+			</div><!-- .custom-content -->
 
 		</div><!-- .container -->
 
