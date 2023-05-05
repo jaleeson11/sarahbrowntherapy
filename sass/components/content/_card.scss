@@ -3,8 +3,10 @@
     border: .15rem solid $color__brand-beige;
     border-radius: .8rem;
 
-    &:hover {
-        box-shadow: 0 1px 4px 3px #00000026;
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0 1px 4px 3px #00000026;
+        }
     }
 
     .card__image {

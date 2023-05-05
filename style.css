@@ -5374,8 +5374,10 @@ textarea {
   border: 0.15rem solid #EFDBCB;
   border-radius: 0.8rem;
 }
-.card:hover {
-  box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.1490196078);
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: 0 1px 4px 3px rgba(0, 0, 0, 0.1490196078);
+  }
 }
 .card .card__image {
   background-size: cover;
