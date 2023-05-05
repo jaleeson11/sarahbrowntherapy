@@ -22,7 +22,7 @@
 		$post_hero; 
 	endif;
 
-	if ( ! is_front_page() ) :
+	if ( ! empty( get_the_content() ) ) :
 		?>
 	<div class="container">
 		<div class="entry-content">
