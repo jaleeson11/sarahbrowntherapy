@@ -7,10 +7,5 @@
 	> * {
 		display: flex;
 		align-items: center;
-
-		&:nth-child(even) {
-			background-color: $color__brand-beige;
-			color: $color__brand-royal-blue;
-		}
 	}
 }

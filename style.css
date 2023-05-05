@@ -5368,10 +5368,6 @@ textarea {
   display: flex;
   align-items: center;
 }
-.testimonials-grid > *:nth-child(even) {
-  background-color: #EFDBCB;
-  color: #345DA7;
-}
 
 .observe {
   opacity: 0;
@@ -5460,6 +5456,10 @@ textarea {
   color: #fff;
   border-radius: 0.8rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+.testimonial:nth-child(odd) {
+  background-color: #EFDBCB;
+  color: #345DA7;
 }
 .testimonial .testimonial__quote {
   margin: 0;
