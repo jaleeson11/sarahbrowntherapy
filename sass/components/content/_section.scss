@@ -1,5 +1,5 @@
 .section {
-    margin-bottom: calc(var(--space-xl) * 2);
+    margin-top: calc(var(--space-xl) * 2);
 
     .section__header {
         margin-bottom: var(--space-lg);
@@ -28,6 +28,6 @@
 
 @include media-breakpoint-up(md) {
     .section {
-        margin-bottom: calc(var(--space-xxl) * 2);
+        margin-top: calc(var(--space-xxl) * 2);
     }
 }

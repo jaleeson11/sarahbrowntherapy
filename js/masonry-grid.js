@@ -5,8 +5,6 @@
         rowGap = parseInt( grid.css( 'grid-row-gap' ) ),
         rowSpan = Math.ceil( ( item.querySelector( '.testimonial__quote' ).getBoundingClientRect().height + rowGap ) / ( rowHeight + rowGap ) );
         item.style.gridRowEnd = 'span ' + rowSpan;
-
-        console.log(item.getBoundingClientRect().height);
     }
 
     function resizeAllGridItems(){

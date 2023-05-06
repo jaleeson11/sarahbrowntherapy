@@ -5391,7 +5391,7 @@ textarea {
   }
 }
 .section {
-  margin-bottom: calc(var(--space-xl) * 2);
+  margin-top: calc(var(--space-xl) * 2);
 }
 .section .section__header {
   margin-bottom: var(--space-lg);
@@ -5416,7 +5416,7 @@ textarea {
 
 @media (min-width: 768px) {
   .section {
-    margin-bottom: calc(var(--space-xxl) * 2);
+    margin-top: calc(var(--space-xxl) * 2);
   }
 }
 .hero {
