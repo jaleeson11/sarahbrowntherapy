@@ -50,11 +50,11 @@ function sarahbrowntherapy_hero() {
 	} 
 	?>
 
-	<div class="entry-hero" style="background-image: url( '<?php echo esc_url( $image_url ); ?>' );">
+	<div class="hero" style="background-image: url( '<?php echo esc_url( $image_url ); ?>' );">
 
-		<div class="entry-hero__content">
+		<div class="hero__content">
 
-			<h1 class="entry-hero__heading">
+			<h1 class="hero__heading">
 				<?php
 				if ( get_field( 'banner_heading' ) ) {
 					the_field( 'banner_heading' );
@@ -62,20 +62,20 @@ function sarahbrowntherapy_hero() {
 					echo wp_kses_post( get_the_title() );
 				}
 				?>
-				<span class="entry-hero__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave-white.svg' );"></span>
-			</h1><!-- .entry-hero__heading -->
+				<span class="hero__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave-white.svg' );"></span>
+			</h1><!-- .hero__heading -->
 
 			<?php $subheading_field = $post_type === 'service' ? 'service_sub-heading' : 'banner_sub-heading'; ?>
 
 			<?php if ( get_field( $subheading_field ) ) : ?>
-				<p class="entry-hero__sub-heading">
+				<small class="hero__sub-heading">
 					<?php the_field( $subheading_field ); ?>
-				</p><!-- .entry-hero__sub-heading -->
+				</small><!-- .hero__sub-heading -->
 			<?php endif; ?>
 
-		</div><!-- .entry-hero__content -->
+		</div><!-- .hero__content -->
 
-	</div><!-- .entry-hero -->
+	</div><!-- .hero -->
 	<?php
 
 	return true;

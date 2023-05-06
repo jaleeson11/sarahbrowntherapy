@@ -42,7 +42,7 @@
 	}
 
 	.current {
-		border-bottom: 2px solid $color__brand-sky-blue;
+		border-bottom: 2px solid $color__brand-steel-blue;
 	}
 }
 
@@ -67,51 +67,7 @@
 .posted-on {
 	text-transform: uppercase;
 	letter-spacing: 3px;
-	color: $color__brand-sky-blue;
-}
-
-.entry-hero {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 372px;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: $color__brand-light-blue;
-	text-align: center;
-
-	.entry-hero__content {
-		padding: 10px;
-		max-width: 800px;
-
-		.entry-hero__heading,
-		.entry-hero__sub-heading {
-			color: #fff;
-		}
-
-		.entry-hero__heading {
-			margin: 0;
-
-			.entry-hero__wave {
-				display: block;
-				background-size: 40px;
-				background-position: center;
-				background-repeat: no-repeat;
-				height: 40px;
-				width: 40px;
-				margin: 0 auto;
-			}
-		}
-	
-		.entry-hero__sub-heading {
-			font-size: 1.3rem;
-			text-transform: uppercase;
-			letter-spacing: 3px;
-			margin: .6rem 0 0;
-		}
-	}
+	color: $color__brand-steel-blue;
 }
 
 .entry-list-item {
