@@ -12,7 +12,7 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(xl) {
 	html {font-size: calc(var(--font-size) * 1.25);}
 }
 

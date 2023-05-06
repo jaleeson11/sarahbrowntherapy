@@ -4186,7 +4186,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --font-size-h1: calc(var(--font-size-h2) * var(--font-ratio));
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   :root {
     --font-ratio: var(--font-ratio-lg);
   }
@@ -4206,7 +4206,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .flex-group {
     flex-direction: row;
   }
@@ -4628,7 +4628,7 @@ textarea {
   line-height: 1.75;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   html {
     font-size: calc(var(--font-size) * 1.25);
   }

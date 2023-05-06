@@ -21,7 +21,7 @@ $font__line-height-pre: 1.6;
     --font-size-h1: calc(var(--font-size-h2) * var(--font-ratio));
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     :root {
         --font-ratio: var(--font-ratio-lg);
     }
