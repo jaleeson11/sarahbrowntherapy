@@ -49,23 +49,23 @@ get_header();
 			<div class="custom-content">
 
 				<section>
-					<div class="image-cta observe">
+					<div class="image-cta">
 						<?php
 						$image_url = get_theme_mod( 'about_me_image' );
 						$image_id  = attachment_url_to_postid( $image_url );
 						?>
 
-						<div class="image-cta__content">
+						<div class="image-cta__content observe">
 							<h2 class="image-cta__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
 							<p class="image-cta__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
 							<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'about_me_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'about_me_button_text' ) ); ?></a>
 						</div>
-						<img class="image-cta__image" src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium_large' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
+						<img class="image-cta__image observe" src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium_large' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
 					</div>
 				</section>
 
 				<section class="section">
-					<header class="section__header">
+					<header class="section__header observe">
 						<h2 class="section__title">
 							<?php echo esc_html( 'My Services' ); ?>
 							<span class="section__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
@@ -124,7 +124,7 @@ get_header();
 				</section>
 
 				<section class="section">
-					<header class="section__header">
+					<header class="section__header observe">
 						<h2 class="section__title">
 							<?php echo esc_html( 'Testimonials' ); ?>
 							<span class="section__wave" style="background-image: url( '<?php echo esc_url( get_template_directory_uri() ); ?>/images/wave.svg' );"></span>
