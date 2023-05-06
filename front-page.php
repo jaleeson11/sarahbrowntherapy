@@ -48,19 +48,19 @@ get_header();
 
 			<div class="custom-content">
 
-				<section class="section">
-					<div class="image-cta-block observe">
+				<section>
+					<div class="image-cta observe">
 						<?php
 						$image_url = get_theme_mod( 'about_me_image' );
 						$image_id  = attachment_url_to_postid( $image_url );
 						?>
 
-						<img class="image-cta-block__image" src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium_large' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
-						<div class="image-cta-block__content">
-							<h2 class="image-cta-block__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
-							<p class="image-cta-block__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
+						<div class="image-cta__content">
+							<h2 class="image-cta__heading"><?php echo esc_html( get_theme_mod( 'about_me_heading' ) ); ?></h2>
+							<p class="image-cta__text"><?php echo esc_html( get_theme_mod( 'about_me_text' ) ); ?></p>
 							<a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'about_me_button_link' ) ) ); ?>" class="site-button"><?php echo esc_html( get_theme_mod( 'about_me_button_text' ) ); ?></a>
 						</div>
+						<img class="image-cta__image" src="<?php echo esc_url( wp_get_attachment_image_url( $image_id, 'medium_large' ) ); ?>" alt="<?php echo get_post_meta( $image_id, '_wp_attachment_image_alt', true ); ?>">
 					</div>
 				</section>
 
