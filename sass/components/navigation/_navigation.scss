@@ -1,6 +1,5 @@
 .main-navigation {
 	display: block;
-	padding-left: 1.5rem;
 
 	ul {
 		list-style: none;
@@ -46,7 +45,6 @@
 
 	li {
 		position: relative;
-		padding: 0 10px;
 
 		&:hover > a,
 		&.focus > a {
@@ -54,9 +52,9 @@
 	}
 
 	a {
-		display: block;
-		text-decoration: none;
-		font-size: 1.25rem;
+		display: inline-block;
+		padding: var(--space-xs);
+		font-family: $font__heading;
 	}
 
 	.current_page_item > a,
@@ -70,21 +68,22 @@
 .menu-toggle {
 	display: block;
 	position: relative;
-	z-index: 2;
-	padding: 2px;
-	background-color: #fff;
-	border: none;
-	border-radius: 5px;
-	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+	z-index: 3;
+	background: none;
+	padding: 0;
 	min-width: auto;
 	cursor: pointer;
+
+	&:hover {
+		background: none;
+	}
 
 	span {
 		display: block;
 		height: 3px;
 		width: 35px;
 		border-radius: 2px;
-		background-color: $color__brand-royal-blue;
+		background-color: $color__brand-steel-blue;
 		margin: 8px;
 		transition: all .3s ease;
 	}
@@ -92,8 +91,6 @@
 
 .main-navigation.toggled {
 	.menu-toggle {
-		background-color: $color__brand-royal-blue;
-
 		span {
 			background-color: #fff;
 		}
@@ -117,29 +114,32 @@
 	.nav-menu {
 		position: fixed;
 		top: 0;
-		left: -100%;
+		left: 0;
+		transform: translateX(-100%);
 		width: 100%;
 		height: 100%;
 		background-color: $color__brand-royal-blue;
 		opacity: 0;
 		text-align: center;
-		padding: 2.5rem 0;
+		padding: var(--space-xl) 0;
 		transition: .3s ease;
-		z-index: 1;
+		z-index: 2;
 		overflow-y: scroll;
 	
 		> li {
-			line-height: 2.5;
-	
+			+ * {
+				margin-top: var(--space-md);
+			}
+
 			> a {
-				font-size: 2.25rem;
+				font-size: 2rem;
 				color: #fff;
 			}
 		}
 	}
 	
 	.main-navigation.toggled .nav-menu {
-		left: 0;
+		transform: translateX(0px);
 		opacity: .9;
 	}
 }
@@ -151,9 +151,6 @@
 	}
 
 	.main-navigation ul {
-		display: flex;
-		flex-wrap: wrap;
-
 		ul {
 			float: left;
 			position: absolute;
@@ -162,8 +159,37 @@
 			z-index: 99999;
 		}
 		
-		> li:not(:last-child) {
-			margin-right: 1.56rem;
+		&.nav-menu {
+			display: flex;
+			flex-wrap: wrap;
+
+			> li {
+				+ * {
+					margin-left: var(--space-sm);
+				}
+	
+				> a {
+					position: relative;
+	
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						height: .2rem;
+						width: 100%;
+						opacity: 0;
+						background: $color__brand-beige;
+						transition: opacity .3s ease;
+					}
+	
+					@media (hover: hover) {
+						&:hover::after {
+							opacity: 1;
+						}
+					}
+				}
+			}
 		}
 	}
 }
