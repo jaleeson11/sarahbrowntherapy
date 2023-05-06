@@ -12,11 +12,10 @@ input[type="submit"],
 	font-size: 1rem;
 	font-weight: 600;
 	text-align: center;
-	padding: var(--space-sm) var(--space-md);
+	padding: var(--space-xs) var(--space-md);
 	min-width: 10ch;
 	min-height: 2.5rem;
 	cursor: pointer;
-	outline: none;
 	touch-action: manipulation;
 	transition: all .3s ease;
 
@@ -28,11 +27,13 @@ input[type="submit"],
 	&:active,
 	&:focus {
 		border-color: $color__brand-steel-blue;
+		outline: none;
 	}
 
 	@supports selector(:focus-visible) {
 		&:focus-visible {
 			border-color: $color__brand-steel-blue;
+			outline: none;
 		}
 	}
 }
