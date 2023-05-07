@@ -16,7 +16,10 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	border: none;
-	background-color: $color__brand-beige;
+	border-radius: .5rem;
+	outline: .2rem solid;
+	outline-color: $color__brand-beige;
+	background-color: #fff;
 	padding: .5rem 1rem;
 	font-size: 1.5rem;
 	width: 100%;
@@ -25,7 +28,12 @@ textarea {
 		color: $color__brand-stone-blue;
 	}
 
+	&:focus:not(:focus-visible) {
+		outline: none;
+	}
+
 	&:focus {
+		outline-color: $color__brand-steel-blue;
 		color: $color__text-input-focus;
 	}
 }
