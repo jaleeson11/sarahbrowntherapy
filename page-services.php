@@ -38,7 +38,7 @@ get_header();
 					while ( $services->have_posts() ) {
 						$services->the_post();
 
-						get_template_part( 'template-parts/content', 'list-item' );
+						get_template_part( 'template-parts/content', 'post-item' );
 					}
 
 					$total_pages = $services->max_num_pages;
@@ -69,7 +69,6 @@ get_header();
 
 				wp_reset_postdata();
 				?>
-
 			</div><!-- .custom-content -->
 		</div><!-- .container -->
 

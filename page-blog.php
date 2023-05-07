@@ -39,7 +39,7 @@ get_header();
 					while ( $posts->have_posts() ) {
 						$posts->the_post();
 						
-						get_template_part( 'template-parts/content', 'list-item' );
+						get_template_part( 'template-parts/content', 'post-item' );
 					}
 
 					$total_pages = $posts->max_num_pages;
