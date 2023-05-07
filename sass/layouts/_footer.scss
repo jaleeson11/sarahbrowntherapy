@@ -1,72 +1,66 @@
 .site-footer {
-    padding-top: 40px;
+    margin-top: var(--space-xl);
 
-    .site-contact-banner {
-        background-color: $color__brand-royal-blue;
+    .contact-banner {
+        padding: var(--space-lg) 0;
+        background-color: $color__brand-steel-blue;
     
-        .site-contact-banner__inner {
-            display: flex;
-            flex-direction: column;
-    
-            > div {
-                text-align: center;
-                padding: 40px 15px;
-    
-                .site-contact-banner__heading {
-                    color: #fff;
-                    margin: 0;
-                    font-size: 1.5rem;
-                }
-    
-                .site-contact-banner__sub-heading {
-                    color: $color__brand-turquoise-blue;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 3px;
-                    margin: 0;
-                }
-    
-                &::before {
-                    font-family: 'Dashicons';
-                    font-size: 2.2rem;
-                    color: #fff;
-                    display: block;
-                }
-    
-                &.site-contact-banner__location::before {
-                    content: '\f230';
-                }
-    
-                &.site-contact-banner__email::before {
-                    content: '\f465';
-                }
-    
-                &.site-contact-banner__phone::before {
-                    content: '\f525';
-                }
+        .contact-banner__item {
+            text-align: center;
+            overflow-wrap: break-word;
+            line-height: 1.3;
+
+            .contact-banner__link {
+                display: block;
+            }
+
+            .contact-banner__heading {
+                margin: 0;
+                color: #fff;
+                font-size: 1rem;
+            }
+
+            .contact-banner__sub-heading {
+                color: $color__brand-beige;
+                letter-spacing: .1rem;
+            }
+
+            &::before {
+                font-family: 'Dashicons';
+                font-size: 2rem;
+                color: #fff;
+                line-height: 1;
+            }
+
+            &--location::before {
+                content: '\f230';
+            }
+
+            &--email::before {
+                content: '\f465';
+            }
+
+            &--phone::before {
+                content: '\f525';
             }
         }
     }
     
     .site-copyright {
+        display: block;
         text-align: center;
-        padding-top: 40px;
+        margin-top: var(--space-lg);
+        padding: var(--space-sm);
+        font-size: .8rem;
     }
 }
 
-@media screen and (min-width: $screen__large) {
+@include media-breakpoint-up(md) {
     .site-footer {
-        padding-top: 80px;
+        margin-top: var(--space-xxl);
 
-        .site-contact-banner .site-contact-banner__inner {
-            align-items: center;
-            flex-direction: row;
-            flex-wrap: wrap;
-    
-            > div {
-                flex: 1;
-            }
+        .contact-banner .contact-banner__item .contact-banner__heading {
+            font-size: 1.25rem;
         }
     }
 }
