@@ -15,18 +15,9 @@
 	margin: 1.5em 0 0;
 }
 
-.entry-content {
-	margin-top: 2.5rem;
-}
-
+.entry-content,
 .custom-content {
-    margin-top: var(--space-xl);
-}
-
-@include media-breakpoint-up(lg) {
-    .custom-content {
-        margin-top: var(--space-xxl);
-    }
+	margin-top: var(--space-xl);
 }
 
 .pagination-links,
@@ -102,8 +93,9 @@
 }
 
 @include media-breakpoint-up(md) {
-	.entry-content {
-		margin-top: 5rem;
+	.entry-content,
+	.custom-content {
+		margin-top: var(--space-xxl);
 	}
 
     .post-item {
