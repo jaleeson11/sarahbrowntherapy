@@ -3,14 +3,13 @@ a {
 	display: inline-block;
 	text-decoration: none;
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
+	&:focus:not(:focus-visible) {
+		outline: none;
 	}
 
 	&:focus {
-		outline: thin dotted;
+		outline: thin solid $color__brand-royal-blue;
+		outline-offset: .2rem;
 	}
 
 	&:hover,
