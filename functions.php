@@ -262,3 +262,13 @@ function sarahbrowntherapy_remove_comments_from_admin_bar() {
     }
 }
 add_action( 'init', 'sarahbrowntherapy_remove_comments_from_admin_bar' );
+
+function sarahbrowntherapy_block_recaptcha() {
+	if ( !is_page( array( 'contact' ) ) ) {
+		wp_dequeue_script( 'google-recaptcha' );
+		wp_deregister_script( 'google-recaptcha' );
+		add_filter( 'wpcf7_load_js', '__return_false' );
+		add_filter( 'wpcf7_load_css', '__return_false' );
+	}
+}
+add_action( 'wp_print_scripts', 'sarahbrowntherapy_block_recaptcha' );
