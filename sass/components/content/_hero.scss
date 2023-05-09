@@ -3,13 +3,14 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	min-height: 45vh;
+	min-height: 50vh;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: $color__brand-beige;
 	text-align: center;
 	position: relative;
+	clip-path: polygon(100% 0%, 0% 0% , 0.00% 98.73%, 2.00% 98.72%, 4.00% 98.54%, 6.00% 98.19%, 8.00% 97.68%, 10.00% 97.03%, 12.00% 96.27%, 14.00% 95.41%, 16.00% 94.50%, 18.00% 93.56%, 20.00% 92.63%, 22.00% 91.73%, 24.00% 90.91%, 26.00% 90.19%, 28.00% 89.60%, 30.00% 89.15%, 32.00% 88.86%, 34.00% 88.75%, 36.00% 88.82%, 38.00% 89.06%, 40.00% 89.46%, 42.00% 90.02%, 44.00% 90.71%, 46.00% 91.51%, 48.00% 92.39%, 50.00% 93.31%, 52.00% 94.26%, 54.00% 95.18%, 56.00% 96.05%, 58.00% 96.84%, 60.00% 97.52%, 62.00% 98.07%, 64.00% 98.47%, 66.00% 98.69%, 68.00% 98.75%, 70.00% 98.62%, 72.00% 98.32%, 74.00% 97.87%, 76.00% 97.26%, 78.00% 96.53%, 80.00% 95.70%, 82.00% 94.81%, 84.00% 93.87%, 86.00% 92.93%, 88.00% 92.02%, 90.00% 91.17%, 92.00% 90.42%, 94.00% 89.78%, 96.00% 89.28%, 98.00% 88.94%, 100.00% 88.77%);
 
 	&::after {
 		content: "";
@@ -33,6 +34,7 @@
 
 		.hero__heading {
 			margin: 0;
+			text-shadow: 2px 2px 8px rgba(0,0,0,0.15);
 
 			.hero__wave {
 				display: block;
@@ -47,8 +49,8 @@
 	
 		.hero__sub-heading {
 			display: inline-block;
-			font-size: 1rem;
-			text-transform: uppercase;
+			font-size: 1.25rem;
+			font-style: italic;
 			letter-spacing: .1rem;
 			margin-top: var(--space-xs);
 		}
