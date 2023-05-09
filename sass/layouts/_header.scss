@@ -1,5 +1,7 @@
 .site-header {
-    padding: var(--space-sm) 0;
+    padding: var(--space-md) 0;
+    position: relative;
+    z-index: 2;
 
     .site-header__inner {
         display: flex;
@@ -10,7 +12,7 @@
             line-height: 0;
 
             img {
-                width: 9rem;
+                width: 7.5rem;
             }
         }
     }
