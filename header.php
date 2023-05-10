@@ -22,6 +22,23 @@
 	} ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<?php
+	$fonts = [
+		'SourceSansPro-Regular',
+		'LibreBaskerville-Regular',
+		'LibreBaskerville-Italic',
+		'SourceSansPro-SemiBold',
+		'SourceSansPro-Bold',
+		'SourceSansPro-Italic',
+	];
+
+	foreach ($fonts as $font) {
+		?>
+		<link rel="preload" href="<?php echo get_template_directory_uri() . '/fonts/' . $font . '.woff' ?>" as="font" type="font/woff" crossorigin>
+		<?php
+	}
+	?>
+
 	<?php wp_head(); ?>
 </head>
 
