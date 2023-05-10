@@ -263,6 +263,9 @@ function sarahbrowntherapy_remove_comments_from_admin_bar() {
 }
 add_action( 'init', 'sarahbrowntherapy_remove_comments_from_admin_bar' );
 
+/**
+ * Prevents reCAPTCHA scripts from loading on all pages apart from contact.
+ */
 function sarahbrowntherapy_block_recaptcha() {
 	if ( !is_page( array( 'contact' ) ) ) {
 		wp_dequeue_script( 'google-recaptcha' );
@@ -272,3 +275,31 @@ function sarahbrowntherapy_block_recaptcha() {
 	}
 }
 add_action( 'wp_print_scripts', 'sarahbrowntherapy_block_recaptcha' );
+
+/**
+ * Pre-loads Google Fonts fron CDN.
+ */
+function sarahbrowntherapy_google_fonts() {
+	// Enter the URL of your Google Fonts generated from https://fonts.google.com/ here.
+	$google_fonts_url = 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap;'
+	?>
+	
+	<link rel="preconnect"
+		href="https://fonts.gstatic.com"
+		crossorigin />
+
+	<link rel="preload"
+		as="style"
+		href="<?php echo $google_fonts_url; ?>" />
+
+	<link rel="stylesheet"
+		href="<?php echo $google_fonts_url; ?>"
+		media="print" onload="this.media='all'" />
+
+	<noscript>
+		<link rel="stylesheet"
+			href="<?php echo $google_fonts_url; ?>" />
+	</noscript>
+	<?php
+}
+add_action( 'wp_head', 'sarahbrowntherapy_google_fonts' );
