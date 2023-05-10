@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'LibreBaskerville-Italic';
+    src: url('LibreBaskerville-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LibreBaskerville-Regular';
+    src: url('LibreBaskerville-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('SourceSansPro-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Italic';
+    src: url('SourceSansPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-SemiBold';
+    src: url('SourceSansPro-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
