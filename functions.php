@@ -276,3 +276,23 @@ function sarahbrowntherapy_block_recaptcha() {
 	}
 }
 add_action( 'wp_print_scripts', 'sarahbrowntherapy_block_recaptcha' );
+
+/**
+ * Pre-loads fonts.
+ */
+function sarahbrowntherapy_preload_fonts() {
+	$fonts = [
+		'SourceSansPro-Regular',
+		'LibreBaskerville-Regular',
+		'LibreBaskerville-Italic',
+		'SourceSansPro-SemiBold',
+		'SourceSansPro-Bold',
+		'SourceSansPro-Italic',
+	];
+
+	foreach ($fonts as $font) {
+		?>
+		<link rel="preload" href="<?php echo get_template_directory_uri() . '/fonts/' . $font . '.woff' ?>" as="font" type="font/woff" crossorigin>
+		<?php
+	}
+}
