@@ -1,13 +1,11 @@
 .site-header {
     padding: var(--space-md) 0;
     position: relative;
-    z-index: 2;
 
     .site-header__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-height: 3.125rem;
     
         .site-branding {
             line-height: 0;
