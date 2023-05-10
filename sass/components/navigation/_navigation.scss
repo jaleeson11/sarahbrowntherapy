@@ -92,7 +92,7 @@
 // Cleaner to go with desktop-first for mobile menu styling.
 @media screen and (max-width: 991px) {
 	.main-navigation {
-		ul.nav-menu {
+		ul:not(.sub-menu) {
 			flex-direction: column;
 			flex-wrap: nowrap;
 			position: fixed;
@@ -141,7 +141,7 @@
 				}
 			}
 
-			.nav-menu {
+			ul:not(.sub-menu) {
 				transform: translateX(0px);
 				opacity: .9;
 			}
