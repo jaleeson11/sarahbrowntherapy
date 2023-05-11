@@ -16,12 +16,13 @@
 
             .contact-banner__heading {
                 margin: 0;
-                color: #fff;
                 font-size: 1rem;
+                color: #fff;
             }
 
             .contact-banner__sub-heading {
-                color: #fff;;
+                font-family: $font__secondary;
+                color: #fff;
                 letter-spacing: .1rem;
             }
 
