@@ -86,8 +86,8 @@ get_header();
 								?>
 
 								<div class="card observe">
-									<a href="<?php the_permalink(); ?>" class="card__link d-block">
-										<span class="card__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );" role="img" aria-label=""></span>
+									<a href="<?php the_permalink(); ?>" class="card__link d-block" aria-hidden="true">
+										<span class="card__image" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></span>
 									</a>
 									<div class="card__body">
 										<a href="<?php the_permalink(); ?>" class="card__link d-block">

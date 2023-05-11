@@ -14,8 +14,8 @@
 	<?php
 	if ( has_post_thumbnail() ) :
 		?>
-		<a href="<?php the_permalink(); ?>" class="post-item__link">
-			<div class="post-item__thumbnail observe" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></div>
+		<a href="<?php the_permalink(); ?>" class="post-item__link" aria-hidden="true">
+			<span class="post-item__thumbnail observe" style="background-image: url( '<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium_large' ) ); ?>' );"></span>
 		</a>
 		<?php
 	endif;
