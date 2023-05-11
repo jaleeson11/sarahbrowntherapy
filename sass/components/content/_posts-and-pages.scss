@@ -16,7 +16,8 @@
 }
 
 .entry-content,
-.custom-content {
+.custom-content,
+.error-404 {
 	margin-top: var(--space-xl);
 }
 
@@ -95,7 +96,8 @@
 
 @include media-breakpoint-up(md) {
 	.entry-content,
-	.custom-content {
+	.custom-content,
+	.error-404 {
 		margin-top: var(--space-xxl);
 	}
 
